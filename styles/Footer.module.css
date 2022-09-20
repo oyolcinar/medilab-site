@@ -1,0 +1,47 @@
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  border-top: 2px solid #e6e6e6;
+  padding: 100px 0 60px 0; 
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.column a {
+  margin-bottom: 10px;
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+
+.terms {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 300;
+}
+
+.icons a {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.inlineIcon {
+  font-size: 0.7rem;
+  margin-right: 5px;
+}
