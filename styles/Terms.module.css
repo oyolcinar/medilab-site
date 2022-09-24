@@ -1,0 +1,17 @@
+.terms p {
+  color: #5b5b5b;
+  font-size: 0.7rem;
+}
+
+.terms ul>li {
+  color: #5b5b5b;
+  font-size: 0.7rem;
+}
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 800px;
+  padding: 50px 0 100px 0; 
+}

@@ -87,17 +87,25 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.terms}>
-        <Link href='/'>
+        <Link href='/policies/privacy-and-cookie-policy'>
           <a>Privacy Policy And Cookie Policy</a>
         </Link>
         <div>|</div>
-        <Link href='/'>
-          <a>Web Site Terms Of Service</a>
+        <Link href='/policies/terms-of-service'>
+          <a>Website Terms Of Service</a>
         </Link>
         <div>|</div>
-        <Link href='/'>
+        <Link href='/policies/terms-and-conditions-and-services-agreement'>
           <a>Terms Conditions And Services Agreement</a>
         </Link>
+      </div>
+      <div>
+        <p>
+          Copyright © 2022, Medilab Estetik,
+          <Link href='https://www.medilabassist.com.tr/en-US/'>
+            <a> MedilabAssist</a>
+          </Link>
+        </p>
       </div>
     </div>
   );
