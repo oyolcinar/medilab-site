@@ -1,0 +1,33 @@
+.dropdown {
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  top: 66px;
+  display: flex;
+  padding: 20px 40px;
+  gap: 100px;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.header {
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+.header:hover {
+  color: blue;
+}
+
+.list {
+  display: inline;
+}
+
+.item {
+  margin-top: 5px;
+  list-style: none;
+}
+
+.item:hover {
+ color: #5b5b5b;
+}

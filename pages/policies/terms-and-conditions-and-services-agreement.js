@@ -260,52 +260,51 @@ const TermsAndConditions = () => {
         b) A visa, if necessary.
         <br />
         c) Other travel documentation.
-        <p>
-          It is your responsibility to provide to provide, in advance of travel,
-          passenger information or locator form to your airline or officials.
-          You must also meet the entry requirements for both your final
-          Destination and any intermediate stopover points en-route. Medilab
-          Estetik assumes no responsibility if you miss your flight, including
-          your connections. You are responsible for providing all necessary
-          official documents and forms, including passport and visa.
-        </p>
-        <p>
-          You accept and agree that in the event of your failure to fulfill the
-          requirements enumerated in above paragraphs, or the information or
-          documents provided by you being incorrect or misleading, you may well
-          be denied to board and refused to enter to the country you are
-          visiting. You accept and acknowledge that in the event of such
-          incidence you will be solely accountable for all consequential costs
-          and Medilab Estetik will accept no responsibility or liability
-          thereof.
-        </p>
-        <p>
-          The sole responsibility lies with you for any fines or costs
-          (including the costs of an immediate return flight) you incur due to
-          your failure to travel with the passport, visa or other official
-          documentation required for travel and entry. Medilab Estetik accepts
-          no liability if you end up in failing as such and no compensation,
-          expenses, refund or other reimbursement will be paid.
-        </p>
-        <p>
-          <b>Health precautions:</b> You will get health advice about your
-          specific needs, or required or recommended vaccinations if any well in
-          advance of travel. This information can be obtained from, among
-          others, the following websites:
-        </p>
-        <p>
-          <Link href='http://www.fco.gov.uk'>
-            <a>www.fco.gov.uk</a>
-          </Link>
-          <br />
-          <Link href='http://www.hpa.org.uk'>
-            <a>www.hpa.org.uk</a>
-          </Link>
-          <br />
-          <Link href='http://www.nathnac.org'>
-            <a>www.nathnac.org</a>
-          </Link>
-        </p>
+      </p>
+      <p>
+        It is your responsibility to provide to provide, in advance of travel,
+        passenger information or locator form to your airline or officials. You
+        must also meet the entry requirements for both your final Destination
+        and any intermediate stopover points en-route. Medilab Estetik assumes
+        no responsibility if you miss your flight, including your connections.
+        You are responsible for providing all necessary official documents and
+        forms, including passport and visa.
+      </p>
+      <p>
+        You accept and agree that in the event of your failure to fulfill the
+        requirements enumerated in above paragraphs, or the information or
+        documents provided by you being incorrect or misleading, you may well be
+        denied to board and refused to enter to the country you are visiting.
+        You accept and acknowledge that in the event of such incidence you will
+        be solely accountable for all consequential costs and Medilab Estetik
+        will accept no responsibility or liability thereof.
+      </p>
+      <p>
+        The sole responsibility lies with you for any fines or costs (including
+        the costs of an immediate return flight) you incur due to your failure
+        to travel with the passport, visa or other official documentation
+        required for travel and entry. Medilab Estetik accepts no liability if
+        you end up in failing as such and no compensation, expenses, refund or
+        other reimbursement will be paid.
+      </p>
+      <p>
+        <b>Health precautions:</b> You will get health advice about your
+        specific needs, or required or recommended vaccinations if any well in
+        advance of travel. This information can be obtained from, among others,
+        the following websites:
+      </p>
+      <p>
+        <Link href='http://www.fco.gov.uk'>
+          <a>www.fco.gov.uk</a>
+        </Link>
+        <br />
+        <Link href='http://www.hpa.org.uk'>
+          <a>www.hpa.org.uk</a>
+        </Link>
+        <br />
+        <Link href='http://www.nathnac.org'>
+          <a>www.nathnac.org</a>
+        </Link>
       </p>
       <p>You should also seek advice from your local GP.</p>
       <p>

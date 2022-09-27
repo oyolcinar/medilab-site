@@ -28,12 +28,20 @@
   font-weight: 400;
 }
 
+.column a:hover {
+  color: #5b5b5b;
+}
+
 .terms {
   margin-top: 70px;
   display: flex;
   justify-content: center;
   gap: 20px;
   font-weight: 300;
+}
+
+.terms a:hover {
+  color: blue;
 }
 
 .icons a {
