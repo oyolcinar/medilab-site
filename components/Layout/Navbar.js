@@ -8,9 +8,12 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
+  function toggleDropdown() {
+    setOpen((prevState) => !prevState);
+  }
+
   return (
     <>
-      {' '}
       <nav className={styles.nav}>
         <div className={styles.container}>
           <Link href='/'>
@@ -31,6 +34,7 @@ const Navbar = () => {
                 >
                   SERVICES
                   <IoMdArrowDropdown className={styles.dropdown} />
+                  {open && <DropdownMenu />}
                 </a>
               </Link>
               <Link href='/blog'>BLOG</Link>
@@ -38,13 +42,6 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        {open && (
-          <DropdownMenu
-            onMouseEnter={() => {
-              setOpen(true);
-            }}
-          />
-        )}
       </nav>
     </>
   );

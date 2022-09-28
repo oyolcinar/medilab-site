@@ -1,0 +1,24 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 50px 0 100px 0; 
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 800px;
+  padding: 50px 0 100px 0; 
+}
+
+.product {
+  color: #5b5b5b;
+  font-size: 0.7rem;
+}
+
+.product ul>li {
+  color: #5b5b5b;
+  font-size: 0.7rem;
+}
