@@ -1,8 +1,18 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const FUTHairTransplant = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>FUT Hair Transplant | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='FUT (Follicular Unit Transplantation) hair transplant, also known as
+          strip harvesting, is an alternative hair transplantation technique to
+          the more commonly operated FUE (Follicular Unit Extraction) procedure.'
+        />
+      </Head>
       <div className={styles.product}>
         <h1>FUT Hair Transplant</h1>
         <p>

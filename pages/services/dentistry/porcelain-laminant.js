@@ -1,8 +1,25 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const PorcelainLaminant = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Porcelain Laminant | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='One of the biggest concerns of dentistry patients have always been
+          about the final look of their treatment. While these aesthetic
+          concerns have been tried to overcome with full crown applications for
+          years, they haven’t been the best solution as they cause substance
+          loss in the patients’ teeth. With the latest developments, now
+          porcelain coats can be much thinner by strengthening its physical
+          properties and therefore they have become more aesthetically pleasing.
+          These very thin and strong porcelain coats are called Laminant
+          Coatings and they have become one of the most popular treatments for
+          the frontal teeth group.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Porcelain Laminant</h1>

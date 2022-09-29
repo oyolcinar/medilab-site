@@ -1,8 +1,23 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const RootCanalTreatment = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Root Canal Treatment | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Root Canal Treatment is applied when a patient’s tooth decay is
+          progressed to the nerves, the tooth is no longer vital or when a root
+          tip infection has occurred. In this process, the tooth’s nerves and
+          pulp chamber are extracted along with the soft tissues in the canals.
+          The remaining channels are cleaned carefully to avoid any bacteria.
+          Then the root canal walls are filed and the root is being shaped. Once
+          these steps are completed, the channels are filled with the filling
+          material.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Root Canal Treatment</h1>

@@ -1,8 +1,12 @@
 import styles from '../../styles/Terms.module.css';
+import Head from 'next/head';
 
 const About = () => {
   return (
     <div className={styles.terms}>
+      <Head>
+        <title>About Us | Medilab Estetik</title>
+      </Head>
       <h2>About Medilab Estetik</h2>
       <p>
         At Medilab Estetik we devoted ourselves to your self-renewal journey.

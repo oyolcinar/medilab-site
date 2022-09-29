@@ -1,8 +1,17 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const Implants = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Implants | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Implants are titanium screws that are placed into the jawbone to act
+          as the root of a natural tooth while making prothesis.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Implants</h1>

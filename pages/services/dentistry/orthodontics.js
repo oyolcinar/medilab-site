@@ -1,8 +1,24 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const Orthodontics = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Orthodontics | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Orthodontic treatment is the process of moving a person’s teeth by
+          enforcing them with brackets to move to their correct spots. Teeth
+          perplexity may occur because of various reasons such as the early loss
+          of a decayed tooth, movement of teeth due to gum problems, cleft
+          palate, mouth breathing, finger sucking/pacifier usage at early ages,
+          wisdom teeth growth or teeth grinding. Although it can be treated at
+          any age, it is recommended to start the treatment at before pubirty
+          (before the age of 10-12) to use physical growth and bone development
+          as an advantage.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Orthodontics</h1>

@@ -1,8 +1,18 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const PanoramicXray = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Panoramic XRay | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Panoramic x-ray or panoramic radiography, a medical image that
+          dentists use to diagnose and treat their patients. It is a 2-D
+          examination of your mouth with a single image.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Panoramic XRay</h1>

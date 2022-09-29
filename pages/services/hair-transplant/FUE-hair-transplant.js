@@ -1,8 +1,18 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const FUEHairTransplant = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>FUE Hair Transplant | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='FUE (follicular unit extraction) hair transplant surgery is the most
+          common method. This technique is a differentiator and mostly referred
+          to as the transplantation procedure rather than surgery.'
+        />
+      </Head>
       <div className={styles.product}>
         <h1>FUE Hair Transplant</h1>
         <p>

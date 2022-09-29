@@ -1,8 +1,24 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const SapphireHairTransplant = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Sapphire Hair Transplant | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='In Sapphire FUE method, as hair follicles are harvested one by one
+            from the donor area and canals are opened in the recipient area with
+            the sapphire tips, the incisions are more precise with the
+            appropriate angles to give an outstanding natural look. It is quite
+            dissapointing for patients when canals are not opened in true angles
+            and therefore, the results give a fabricated appearance instead of a
+            natural look. Hair follicles are implanted into canals of their
+            size. Sapphire tips make it easier to hold the hair follicles in
+            canals; angles would not rotate or roots would not displace.'
+        />
+      </Head>
       <div className={styles.product}>
         <h1>Sapphire Hair Transplant</h1>
         <p>

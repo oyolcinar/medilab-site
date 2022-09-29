@@ -1,8 +1,18 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const LifeCheckUpTwo = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Life Check Up #2 | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Check in with your well-being with our Check Up Packages. Our experienced and competent team accompanies you on your
+          self-renewal journey with Giseya and ensures that the examinations in
+          your package are completed.'
+        />
+      </Head>
       <div className={styles.product}>
         <h1>Life Check Up 2</h1>
         <p>

@@ -1,8 +1,16 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const Fillings = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Fillings | Medilab Estetik</title>
+        <meta
+          name='description'
+          content="Sparkle your smile with health. Fillings are a simple yet effective tool to restore your smile's natural beauty. "
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Fillings</h1>

@@ -1,8 +1,12 @@
 import styles from '../../styles/Terms.module.css';
+import Head from 'next/head';
 
 const TermOfService = () => {
   return (
     <div className={styles.terms}>
+      <Head>
+        <title>Website Terms of Service | Medilab Estetik</title>
+      </Head>
       <h2>Website Terms of Service</h2>
       <p>
         <b>medilabestetik.com Web Site Terms Of Service</b>

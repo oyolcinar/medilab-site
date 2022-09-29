@@ -1,10 +1,16 @@
 import Link from 'next/link';
 import styles from '../../styles/Terms.module.css';
+import Head from 'next/head';
 
 const TermsAndConditions = () => {
   return (
     <div className={styles.terms}>
-      <h2>Terms Conditions and Services Agreement</h2>
+      <Head>
+        <title>
+          Terms & Conditions and Services Agreement | Medilab Estetik
+        </title>
+      </Head>
+      <h2>Terms & Conditions and Services Agreement</h2>
       <p>
         <b>Terms And Conditions Of Medilab Estetik Services Agreement</b>
       </p>

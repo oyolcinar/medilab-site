@@ -1,8 +1,12 @@
 import styles from '../../styles/Terms.module.css';
+import Head from 'next/head';
 
 const HospitalsAndClinics = () => {
   return (
     <div className={styles.terms}>
+      <Head>
+        <title>Hospitals & Clinics | Medilab Estetik</title>
+      </Head>
       <h2>Hospitals and Clinics</h2>
       <p>
         <b>MEDILAB ASSIST</b>

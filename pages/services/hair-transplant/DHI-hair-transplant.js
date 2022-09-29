@@ -1,8 +1,25 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const DHIHairTransplant = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>DHI Hair Transplant | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='The DHI hair transplant technique has certain advantages like being
+          a single step procedure and requiring less donor hairs and using
+          merely alive hair follicles. In this technique there is virtually no
+          scarring as there is no scalpels and stitches during the procedure.
+          In addition, going back to normal life after the procedure is quite
+          short as there is less time needed for recovery. The recovery time
+          in DHI hair transplan is significantly reduced as compared to the
+          traditional FUT procedure. Efficiency of this procedure is endorsed
+          by superb results in tackling small areas of weakening and thinning
+          hair.'
+        />
+      </Head>
       <div className={styles.product}>
         <h1>DHI Hair Transplant</h1>
         <p>

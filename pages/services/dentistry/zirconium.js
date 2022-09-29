@@ -1,8 +1,19 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const Zirconium = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Zirconium | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='When it comes to dental aesthetics, durability, texture harmony and
+          natural results are the most important elements. Zirconium dental
+          crowns are a new technology product, that meets all these requirements
+          for patients and dentists.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Zirconium</h1>

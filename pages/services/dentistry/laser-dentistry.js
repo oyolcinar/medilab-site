@@ -1,8 +1,22 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const LaserDentistry = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Laser Dentistry | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='In the previous years, laser treatments were only used in soft tissue
+          operations or certain aesthetic procedures such as teeth whitening.
+          However, with the latest developments it is now possible to benefit
+          lasers even for the hard tissue operations. The new lasers can used in
+          different procedures from tooth and gum diseases to dental aesthetics.
+          It is now possible to treat the patients with precise laser movements
+          by avoiding healthy teeth or gums.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Laser Dentistry</h1>

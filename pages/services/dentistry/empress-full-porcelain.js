@@ -1,8 +1,19 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const EmpressFullPorcelain = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Empress Full Porcelain | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Empress crowns are a kind of porcelain that provides translucency,
+          ability to reflect and transmit the light and therefore a natural
+          look. The material’s resistance is increased by firing glass ceramic
+          over a crystalline core that is compress under pressure.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Empress (Full Porcelain)</h1>

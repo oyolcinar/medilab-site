@@ -1,8 +1,18 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const SmileAesthetics = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Smile Aesthetics | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Everyone wants and deserves a beautiful smile. Therefore, in today’s
+          aesthetic dentistry, “Smile Design” or “Smile Aesthetics” in other
+          words, is the most popular treatment among patients.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Smile Aesthetics</h1>

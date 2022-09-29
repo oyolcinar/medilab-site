@@ -1,9 +1,13 @@
 import styles from '../../styles/Terms.module.css';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const PrivacyPolicy = () => {
   return (
     <div className={styles.terms}>
+      <Head>
+        <title>Privacy and Cookie Policy | Medilab Estetik</title>
+      </Head>
       <h2>Privacy and Cookie Policy</h2>
       <p>
         <b>Medilab Estetik Privacy Policy And Cookie Policy</b>

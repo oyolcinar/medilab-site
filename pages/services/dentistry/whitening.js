@@ -1,8 +1,17 @@
 import styles from '../../../styles/Product.module.css';
+import Head from 'next/head';
 
 const Whitening = () => {
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>Whitening | Medilab Estetik</title>
+        <meta
+          name='description'
+          content='Teeth whitening is a technique that makes your teeth look a few shades
+          brighter than the existing colour.'
+        />
+      </Head>
       <div className={styles.product}>
         <div>
           <h1>Whitening</h1>
