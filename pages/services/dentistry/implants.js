@@ -45,11 +45,11 @@ const Implants = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             Once it is compatible with the bone, then the prothesis can be
             applied on it without damaging the teeth next to it.

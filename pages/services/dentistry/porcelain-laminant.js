@@ -45,11 +45,11 @@ const PorcelainLaminant = () => {
           HBsag
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             As the loss of a natural tooth or removal of a part of the dental
             tissue are difficult and undesired solutions, it is important to

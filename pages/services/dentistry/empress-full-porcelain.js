@@ -47,11 +47,11 @@ const EmpressFullPorcelain = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             The procedure starts with taking the photos and measures of the
             patient’s face and mouth. In order to give an idea of the results to

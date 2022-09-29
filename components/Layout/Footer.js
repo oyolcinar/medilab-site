@@ -52,7 +52,9 @@ const Footer = () => {
           <h3>CONTACT US</h3>
           <Link href='/'>
             <a>
-              Büyükdere Caddesi Tankaya Palas No:14 Kat:6 34360 Şişli - İSTANBUL
+              Büyükdere Caddesi Tankaya Palas
+              <br />
+              No:14 Kat:6 34360 Şişli - İSTANBUL
             </a>
           </Link>
           <Link href='/'>
@@ -61,7 +63,7 @@ const Footer = () => {
               +90 549 170 12 00
             </a>
           </Link>
-          <Link href='/'>
+          <Link href='mailto:info@medilabestetik.com'>
             <a>
               <IoMdMail className={styles.inlineIcon} />
               info@medilabestetik.com
@@ -69,17 +71,17 @@ const Footer = () => {
           </Link>
           <div className={styles.icons}>
             <Link href='/'>
-              <a>
+              <a target='_blank' rel='noopener noreferrer'>
                 <IoLogoTwitter />
               </a>
             </Link>
             <Link href='/'>
-              <a>
+              <a target='_blank' rel='noopener noreferrer'>
                 <IoLogoFacebook />
               </a>
             </Link>
             <Link href='/'>
-              <a>
+              <a target='_blank' rel='noopener noreferrer'>
                 <IoLogoInstagram />
               </a>
             </Link>
@@ -103,7 +105,9 @@ const Footer = () => {
         <p>
           Copyright © 2022, Medilab Estetik,
           <Link href='https://www.medilabassist.com.tr/en-US/'>
-            <a> MedilabAssist</a>
+            <a target='_blank' rel='noopener noreferrer'>
+              MedilabAssist
+            </a>
           </Link>
         </p>
       </div>

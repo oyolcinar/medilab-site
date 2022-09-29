@@ -24,7 +24,7 @@ const FUTHairTransplant = () => {
           <b> Free</b>
         </p>
         <p>
-          <b>Free Mini Check-Up: Free</b>
+          <b>Free Mini Check-Up:</b>
           <br />
           Glucose
           <br />
@@ -47,11 +47,11 @@ const FUTHairTransplant = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             <b>Donor Harvesting</b>
             <br />
@@ -98,20 +98,20 @@ const FUTHairTransplant = () => {
           </p>
           <p>
             <b>Advantages of FUT technique</b>
-            <br />
-            Natural result
-            <br />
-            Greater density
-            <br />
-            Permanent solution for hair loss
-            <br />
-            Can be applied to the patients with reduced doner area
-            <br />
-            FUT (Follicular Unit Transplantation) hair transplant, also known as
-            strip harvesting, is an alternative hair transplantation technique
-            to the more commonly operated FUE (Follicular Unit Extraction)
-            procedure.
-            <br />
+          </p>
+          <ul>
+            <li> Natural result</li>
+            <li> Greater density</li>
+            <li> Permanent solution for hair loss</li>
+            <li> Can be applied to the patients with reduced doner area</li>
+            <li>
+              FUT (Follicular Unit Transplantation) hair transplant, also known
+              as strip harvesting, is an alternative hair transplantation
+              technique to the more commonly operated FUE (Follicular Unit
+              Extraction) procedure.
+            </li>
+          </ul>
+          <p>
             Round-Trip Airport Transfer: <b>Free</b>
             <br />
             Hotel-Hospital Transfers: <b>Free</b>
@@ -119,7 +119,7 @@ const FUTHairTransplant = () => {
             Covid-19 PCR Test: <b>Free</b>
           </p>
           <p>
-            <b>Free Mini Check-Up: Free</b>
+            <b>Free Mini Check-Up:</b>
             <br />
             Glucose
             <br />

@@ -16,11 +16,11 @@ const Fillings = () => {
           but also solid enough to not require a full crown treatment.
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             In certain cases that a patient’s decays have progressed over more
             teeth and cause distortion on the appearance, inlay-onlay fillings

@@ -51,11 +51,11 @@ const RootCanalTreatment = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             A health tooth has fluid circulation which allows the tooth to be
             flexible. With the root canal treatment this circulation is cut and
@@ -76,7 +76,9 @@ const RootCanalTreatment = () => {
             antibiotics or painkillers can be taken with the guidance of your
             dentist.
           </p>
-          <p>Advantages of Root Canal Treatment</p>
+          <p>
+            <b>Advantages of Root Canal Treatment</b>
+          </p>
           <ul>
             <li>Prevents the removal of the dead tooth</li>
             <li>More natural look</li>

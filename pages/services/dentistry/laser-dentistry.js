@@ -50,11 +50,11 @@ const LaserDentistry = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             Laser treatments are applied to minimize the post-operative swelling
             and pain in implant surgeries, to create the right level and

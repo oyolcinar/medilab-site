@@ -50,11 +50,11 @@ const StandardCheckUp = () => {
           </li>
         </ul>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <ul>
             <li>
               <b>MEDICAL EXAMINATION</b>

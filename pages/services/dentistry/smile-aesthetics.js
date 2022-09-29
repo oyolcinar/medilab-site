@@ -21,7 +21,8 @@ const SmileAesthetics = () => {
           Hotel-Hospital Transfers: <b>Free</b>
           <br />
           Covid-19 PCR Test: <b>Free</b>
-          <br />
+        </p>
+        <p>
           <b>Free Mini Check-Up:</b>
           <br />
           Glucose
@@ -45,11 +46,11 @@ const SmileAesthetics = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             While designing a patient’s smile, several factors are taken into
             consideration such as gender, skin colour, facial features or lip
@@ -76,7 +77,8 @@ const SmileAesthetics = () => {
             Hotel-Hospital Transfers: <b>Free</b>
             <br />
             Covid-19 PCR Test: <b>Free</b>
-            <br />
+          </p>
+          <p>
             <b>Free Mini Check-Up:</b>
             <br />
             Glucose

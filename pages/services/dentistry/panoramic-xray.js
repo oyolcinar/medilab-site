@@ -16,11 +16,11 @@ const PanoramicXray = () => {
           examination of your mouth with a single image.
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             A jaw has a curved structure, but the panoramic x-ray produces a
             flat image which shows the details of the patient’s bones and teeth.

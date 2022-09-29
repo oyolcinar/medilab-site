@@ -20,8 +20,9 @@ const Whitening = () => {
           Hotel-Hospital Transfers: <b>Free</b>
           <br />
           Covid-19 PCR Test: <b>Free</b>
-          <br />
-          <b>Free Mini Check-Up: Free</b>
+        </p>
+        <p>
+          <b>Free Mini Check-Up:</b>
           <br />
           Glucose
           <br />
@@ -44,11 +45,11 @@ const Whitening = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             <b>Home whitening</b>
             <br />

@@ -183,7 +183,9 @@ const TermsAndConditions = () => {
         c) Information about visa and passport requirements (this information
         can also be obtained from{' '}
         <Link href='https://www.evisa.gov.tr/en/'>
-          <a>https://www.evisa.gov.tr/en/</a>
+          <a target='_blank' rel='noopener noreferrer'>
+            https://www.evisa.gov.tr/en/
+          </a>
         </Link>
         );
         <br />
@@ -295,15 +297,21 @@ const TermsAndConditions = () => {
       </p>
       <p>
         <Link href='http://www.fco.gov.uk'>
-          <a>www.fco.gov.uk</a>
+          <a target='_blank' rel='noopener noreferrer'>
+            www.fco.gov.uk
+          </a>
         </Link>
         <br />
         <Link href='http://www.hpa.org.uk'>
-          <a>www.hpa.org.uk</a>
+          <a target='_blank' rel='noopener noreferrer'>
+            www.hpa.org.uk
+          </a>
         </Link>
         <br />
         <Link href='http://www.nathnac.org'>
-          <a>www.nathnac.org</a>
+          <a target='_blank' rel='noopener noreferrer'>
+            www.nathnac.org
+          </a>
         </Link>
       </p>
       <p>You should also seek advice from your local GP.</p>

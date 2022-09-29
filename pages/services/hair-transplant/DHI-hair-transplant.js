@@ -9,9 +9,9 @@ const DHIHairTransplant = () => {
           <b>Service Code :</b>DHI01
         </p>
         <p>
-          FUT (Follicular Unit Transplantation) hair transplant, also known as
-          strip harvesting, is an alternative hair transplantation technique to
-          the more commonly operated FUE (Follicular Unit Extraction) procedure.
+          Discover a new world witheverlasting solutions, We know hair loss
+          could be demotivating, but a hair transplant in Turkey is the most
+          effective solution. You know why?
         </p>
         <p>
           Round-Trip Airport Transfer:
@@ -24,7 +24,7 @@ const DHIHairTransplant = () => {
           <b> Free</b>
         </p>
         <p>
-          <b>Free Mini Check-Up: Free</b>
+          <b>Free Mini Check-Up:</b>
           <br />
           Glucose
           <br />
@@ -47,79 +47,86 @@ const DHIHairTransplant = () => {
           </b>
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
-            <b>Donor Harvesting</b>
-            <br />
-            Initial step in FUT technique is identifying and assessing the donor
-            area for suitability of harvesting follicles and the removal of the
-            donor strip from the back of the sculp. Afterwards the tissue strip
-            is dissected into follicular units at optimal approximate measures
-            for implanting. This surgical procedure is neatly made for
-            concealing the donor area surgical scar by allowing some hair to
-            grow through the scar tissue, minimising its visibility.
+            The DHI hair transplant technique has certain advantages like being
+            a single step procedure and requiring less donor hairs and using
+            merely alive hair follicles. In this technique there is virtually no
+            scarring as there is no scalpels and stitches during the procedure.
+            In addition, going back to normal life after the procedure is quite
+            short as there is less time needed for recovery. The recovery time
+            in DHI hair transplan is significantly reduced as compared to the
+            traditional FUT procedure. Efficiency of this procedure is endorsed
+            by superb results in tackling small areas of weakening and thinning
+            hair.
           </p>
           <p>
-            <b>Graft preparation</b>
+            <b>DHI procedure</b>
             <br />
-            Higly skilled and equipped team of specialists dissect the donor
-            tissue efficiently under a microscope into individual grafts of 1- 4
-            hairs. A correct procedure creates no trauma to, or transection of,
-            the grafts. Such dissection creates small and neat grafts in natural
-            groupings of 1- 4 hairs. This enables applying the smallest possible
-            incision into which the grafts are placed, in turn, means less
-            trauma and better graft survival.
+            Under FUE technique as practiced in 3 steps: initially follicle
+            grafts are harvested, canals are opened in the recipient area and
+            finally harvested grafts are implanted into the canals opened.
           </p>
           <p>
-            <b>Creating recipient area</b>
-            <br />
-            During harvesting the grafts, the surgeon creates the recipient
-            sites in the proper angle, direction and orientation as planned and
-            designed specifically for the patient to produce amazing results.
-            The surgeon aims to make thousands of tiny incisions in such a way
-            that will ensure maximum survival of the grafts and minimal trauma.
+            In DHI hair transplant, the first stage is also harvesting the
+            grafts from the donor area donor area, similar to the FUE technique.
+            Right after the harvesting with a shorter preservation time with
+            implant pen device, grafts are directly transferred to the recipient
+            area without opening canals beforehand. Canal is opened within
+            seconds with DHI implant pen and the graft is placed into the canal.
+            Unlike the FUE method, in a single procedure the canals are opened
+            and the follicles are transferred at once. The hair follicles are
+            implanted one by one directly to the thinning and wekened area that
+            needs to be covered.
           </p>
           <p>
-            <b>Placement of grafts</b>
+            <b>Pain-free anesthesia</b>
             <br />
-            In preparing the implantation area, the surgeon engraves the low
-            density recipient area to place the follicles at the appropriate
-            angles to give a natural look in the hairline for ensuring denser
-            and comfortable feel.
+            Prior to harvesting follicle grafts, the donor area is locally
+            anesthetized with a pain-free method by using a special device. In
+            this process, patients feel no or quite minimal pain or ache. After
+            applying anesthesia, hair follicle grafts are harvested from the
+            donor area with a special implant pen.
           </p>
           <p>
-            Finally, hair grafts are implanted into the recipient area of the
-            scalp by a surgical technician who places each graft carefully and
-            meticulously.
+            Unlike FUE method, canals are not opened in advance of transplant in
+            the recipient area in DHI technique. The grafts harvested from the
+            donor area are preserved in the implant pen with minimal time
+            outside the head and then directly implanted. Canals are opened with
+            the tip of the pen stucking into the recipient area and then the
+            harvested graft is pushed inside the canal opened. Recovery time is
+            faster in DHI technique as scar and damage in the donor and
+            recipient areas is minimal.
           </p>
           <p>
-            <b>Advantages of FUT technique</b>
-            <br />
-            Natural result
-            <br />
-            Greater density
-            <br />
-            Permanent solution for hair loss
-            <br />
-            Can be applied to the patients with reduced doner area
-            <br />
-            FUT (Follicular Unit Transplantation) hair transplant, also known as
-            strip harvesting, is an alternative hair transplantation technique
-            to the more commonly operated FUE (Follicular Unit Extraction)
-            procedure.
-            <br />
-            Round-Trip Airport Transfer: <b>Free</b>
-            <br />
-            Hotel-Hospital Transfers: <b>Free</b>
-            <br />
-            Covid-19 PCR Test: <b>Free</b>
+            <b>Advantages of DHI technique</b>
           </p>
+          <ul>
+            <li>
+              The latest hair transplant technique with proven denser and more
+              natural look results
+            </li>
+            <li>Treatment with specific pen like implant device</li>
+            <li>
+              Preserving harvested grafts from the donor area outside the head
+              for minimum time
+            </li>
+            <li>
+              Simpler to implant the hair follicles during transplantation
+            </li>
+            <li>Less scar, minimal donor area damage</li>
+            <li>More frequently applied procedure with DHI method</li>
+            <li>
+              No shaving necessary (great advantage particularly for women)
+            </li>
+            <li>Shorter recovery period</li>
+          </ul>
           <p>
-            <b>Free Mini Check-Up: Free</b>
+            <b>Free Mini Check-Up:</b>
             <br />
             Glucose
             <br />

@@ -22,3 +22,29 @@
   color: #5b5b5b;
   font-size: 0.7rem;
 }
+
+.details {
+  border-radius: 10px;
+  background-color: rgb(251, 240, 225);
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.header {
+  background-color: #12aac5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 0.8rem;
+  min-height: 63.03px;
+}
+
+.content {
+  padding: 20px 50px;
+  font-size: 0.7rem;
+}

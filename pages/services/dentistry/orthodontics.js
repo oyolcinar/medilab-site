@@ -22,11 +22,11 @@ const Orthodontics = () => {
           as an advantage.
         </p>
       </div>
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             Prior to the treatment, patients should go through certain tests and
             analysis to be diagnosed and to create a personal treatment plan.
@@ -69,16 +69,17 @@ const Orthodontics = () => {
             examination sessions may be more frequent for the first months.
           </p>
           <p>
-            <b>What should I do if my bracket is broken?</b>Since the broken
-            bracket will affect the treatment, it is necessary to see your
-            dentist as soon as possible. If the braces hurt your gum, braces wax
-            can be used.
+            <b>What should I do if my bracket is broken?</b> <br />
+            Since the broken bracket will affect the treatment, it is necessary
+            to see your dentist as soon as possible. If the braces hurt your
+            gum, braces wax can be used.
           </p>
           <p>
             <b>
               Will my teeth return to their original state after my braces
               treatment is completed?
             </b>
+            <br />
             After orthodontic treatment, your anterior teeth will be fixed with
             stabilizer wires. When the treatment is finished, you will have a
             beautiful teeth structure However, once the braces are removed from

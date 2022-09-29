@@ -8,7 +8,7 @@ const Zirconium = () => {
           <h1>Zirconium</h1>
         </div>
         <p>
-          <b>Service Code: </b>Zrc01
+          <b>Service Code: </b>ZRC01
         </p>
         <p>
           When it comes to dental aesthetics, durability, texture harmony and
@@ -22,8 +22,9 @@ const Zirconium = () => {
           Hotel-Hospital Transfers: <b>Free</b>
           <br />
           Covid-19 PCR Test: <b>Free</b>
-          <br />
-          Free Mini Check-Up: <b>Free</b>
+        </p>
+        <p>
+          <b>Free Mini Check-Up:</b>
           <br />
           Glucose
           <br />
@@ -46,11 +47,11 @@ const Zirconium = () => {
         </p>
       </div>
 
-      <div>
-        <div>
+      <div className={styles.details}>
+        <div className={styles.header}>
           <h3>Product Details</h3>
         </div>
-        <div>
+        <div className={styles.content}>
           <p>
             Zirconium’s transparent structure allows the teeth look more natural
             while it is also very resistant to your mouth’s chewing forces. It
@@ -93,14 +94,16 @@ const Zirconium = () => {
             If the patient requires a frontal teeth treatment for one or two
             teeth, empress crowns are preferred. If further aesthetics and
             durability is needed, then zirconium is recommended.
-            <br />
+          </p>
+          <p>
             Round-Trip Airport Transfer: <b>Free</b>
             <br />
             Hotel-Hospital Transfers: <b>Free</b>
             <br />
             Covid-19 PCR Test: <b>Free</b>
-            <br />
-            <b>Free Mini Check-Up:Free</b>
+          </p>
+          <p>
+            <b>Free Mini Check-Up:</b>
             <br />
             Glucose
             <br />
