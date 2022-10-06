@@ -4,8 +4,12 @@ import ButtonLarge from '../UI/ButtonLarge';
 import { useState } from 'react';
 import DropdownMenu from '../UI/DropdownMenu';
 import { IoMdArrowDropdown } from 'react-icons/io';
+import { useSession } from 'next-auth/react';
 
 const Navbar = () => {
+  const { data: session, status } = useSession();
+  const loading = status === 'loading';
+
   const [open, setOpen] = useState(false);
 
   function toggleDropdown() {
@@ -38,7 +42,8 @@ const Navbar = () => {
                 </a>
               </Link>
               <Link href='/blog'>BLOG</Link>
-              <ButtonLarge name='Log In' />
+              {!session && !loading && <ButtonLarge name='Login' />}
+              {session && <ButtonLarge name='Logout' />}
             </ul>
           </div>
         </div>
