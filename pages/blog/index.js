@@ -7,7 +7,9 @@ const Blog = () => {
       <Head>
         <title>Blog | Medilab Estetik</title>
       </Head>
-      <h1>Blog</h1>
+      <div>
+        <h2>Blog</h2>
+      </div>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const DropdownMenu = () => {
     <div className={styles.dropdown}>
       <DropdownCluster
         name='Dentistry'
-        link='/'
+        link='/services/dentistry'
         sublinks={[
           { linkName: 'Zirconium', url: '/services/dentistry/zirconium' },
           {
@@ -41,7 +41,7 @@ const DropdownMenu = () => {
       />
       <DropdownCluster
         name='Hair Transplant'
-        link='/'
+        link='/services/hair-transplant'
         sublinks={[
           {
             linkName: 'FUT Hair Transplant',
@@ -63,7 +63,7 @@ const DropdownMenu = () => {
       />
       <DropdownCluster
         name='Check Up Packages'
-        link='/'
+        link='/services/check-up-packages'
         sublinks={[
           {
             linkName: 'Standard Check Up',

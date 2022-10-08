@@ -11,7 +11,9 @@ const Services = () => {
           content='Services provided by Medilab Estetik'
         />
       </Head>
-      <h1>Services</h1>
+      <div>
+        <h2>Services</h2>
+      </div>
     </div>
   );
 };
