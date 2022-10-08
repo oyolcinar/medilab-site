@@ -9,6 +9,7 @@
   border-bottom: 2px solid #e6e6e6;
   width: 100%;
   background-color: #fff;
+  top: 0;
 }
 
 .container {
@@ -24,14 +25,14 @@
   align-items: center;
 }
 
-.list a{
+.list > a{
   margin: 0 25px 0 25px;
   padding-bottom: 40px;
   line-break: normal;
 
 }
 
-.list a:hover {
+.list > a:hover {
   color: #5b5b5b;
 }
 

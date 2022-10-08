@@ -5,28 +5,6 @@ const DropdownMenu = () => {
   return (
     <div className={styles.dropdown}>
       <DropdownCluster
-        name='Hair Transplant'
-        link='/'
-        sublinks={[
-          {
-            linkName: 'FUT Hair Transplant',
-            url: '/services/hair-transplant/FUT-hair-transplant',
-          },
-          {
-            linkName: 'DHI Hair Transplant',
-            url: '/services/hair-transplant/DHI-hair-transplant',
-          },
-          {
-            linkName: 'Sapphire Hair Transplant',
-            url: '/services/hair-transplant/sapphire-hair-transplant',
-          },
-          {
-            linkName: 'FUE Hair Transplant',
-            url: '/services/hair-transplant/FUE-hair-transplant',
-          },
-        ]}
-      />
-      <DropdownCluster
         name='Dentistry'
         link='/'
         sublinks={[
@@ -59,6 +37,28 @@ const DropdownMenu = () => {
             url: '/services/dentistry/empress-full-porcelain',
           },
           { linkName: 'Whitening', url: '/services/dentistry/whitening' },
+        ]}
+      />
+      <DropdownCluster
+        name='Hair Transplant'
+        link='/'
+        sublinks={[
+          {
+            linkName: 'FUT Hair Transplant',
+            url: '/services/hair-transplant/FUT-hair-transplant',
+          },
+          {
+            linkName: 'DHI Hair Transplant',
+            url: '/services/hair-transplant/DHI-hair-transplant',
+          },
+          {
+            linkName: 'Sapphire Hair Transplant',
+            url: '/services/hair-transplant/sapphire-hair-transplant',
+          },
+          {
+            linkName: 'FUE Hair Transplant',
+            url: '/services/hair-transplant/FUE-hair-transplant',
+          },
         ]}
       />
       <DropdownCluster

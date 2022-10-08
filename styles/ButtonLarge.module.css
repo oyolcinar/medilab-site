@@ -2,4 +2,11 @@
   padding: 15px 40px;
   border-style: none;
   border-radius: 5px;
+  cursor: pointer;
+  background-color: #12aac5;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #2fbed7;
 }

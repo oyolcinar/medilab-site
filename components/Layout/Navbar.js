@@ -4,9 +4,11 @@ import ButtonLarge from '../UI/ButtonLarge';
 import { useState } from 'react';
 import DropdownMenu from '../UI/DropdownMenu';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+  const router = useRouter();
   const { data: session, status } = useSession();
   const loading = status === 'loading';
 
@@ -14,6 +16,18 @@ const Navbar = () => {
 
   function toggleDropdown() {
     setOpen((prevState) => !prevState);
+  }
+
+  function logoutHandler() {
+    signOut();
+  }
+
+  function loginHandler() {
+    router.push('/auth');
+  }
+
+  function linkClickHandler() {
+    setOpen(false);
   }
 
   return (
@@ -35,6 +49,7 @@ const Navbar = () => {
                   onMouseLeave={() => {
                     setOpen(false);
                   }}
+                  onClick={linkClickHandler}
                 >
                   SERVICES
                   <IoMdArrowDropdown className={styles.dropdown} />
@@ -42,8 +57,10 @@ const Navbar = () => {
                 </a>
               </Link>
               <Link href='/blog'>BLOG</Link>
-              {!session && !loading && <ButtonLarge name='Login' />}
-              {session && <ButtonLarge name='Logout' />}
+              {!session && !loading && (
+                <ButtonLarge name='Login' onClick={loginHandler} />
+              )}
+              {session && <ButtonLarge onClick={logoutHandler} name='Logout' />}
             </ul>
           </div>
         </div>

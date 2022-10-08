@@ -14,13 +14,13 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.column}>
           <h3>CATEGORIES</h3>
-          <Link href='/'>
+          <Link href='/services/hair-transplant'>
             <a>HAIR TRANSPLANT</a>
           </Link>
-          <Link href='/'>
+          <Link href='/services/dentistry'>
             <a>DENTISTRY</a>
           </Link>
-          <Link href='/'>
+          <Link href='/services/check-up-packages'>
             <a>CHECK UP PACKAGES</a>
           </Link>
         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
           <Link href='/hospitals-and-clinics'>
             <a>HOSPITALS AND CLINICS</a>
           </Link>
-          <Link href='/'>
+          <Link href='/testimonials'>
             <a>TESTIMONIALS</a>
           </Link>
         </div>

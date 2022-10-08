@@ -1,22 +1,31 @@
 .dropdown {
-  position: absolute;
+  position: absolute !important;
   background-color: #fff;
   z-index: 1;
   top: 66px;
-  display: flex;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   padding: 20px 40px;
   gap: 100px;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .header {
-  margin-bottom: 5px;
   font-size: 0.8rem;
+  color: black !important;
 }
 
 .header:hover {
-  color: blue;
+  color: #12aac5 !important;
+}
+
+.seperator {
+  border: 1px solid #e6e6e6;
 }
 
 .list {
@@ -24,10 +33,11 @@
 }
 
 .item {
-  margin-top: 5px;
+  margin-top: 8px;
   list-style: none;
+  color:black !important;
 }
 
 .item:hover {
- color: #5b5b5b;
+ color: #12aac5 !important;
 }

@@ -13,6 +13,7 @@ const DropdownCluster = (props) => {
       <Link href={props.link}>
         <a className={styles.header}>{props.name}</a>
       </Link>
+      <div className={styles.seperator}></div>
       <ul className={styles.list}>{sublinks}</ul>
     </div>
   );
