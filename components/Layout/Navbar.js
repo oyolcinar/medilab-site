@@ -40,7 +40,7 @@ const Navbar = () => {
           <div>
             <ul className={styles.list}>
               <Link href='/about'>ABOUT US</Link>
-              <Link href='/pricing'>PRICING</Link>
+              {!session && <Link href='/pricing'>PRICING</Link>}
               <Link href='/services'>
                 <a
                   onMouseEnter={() => {
@@ -57,6 +57,7 @@ const Navbar = () => {
                 </a>
               </Link>
               <Link href='/blog'>BLOG</Link>
+              {session && <Link href='/cart'>CART</Link>}
               {!session && !loading && (
                 <ButtonLarge name='Login' onClick={loginHandler} />
               )}
