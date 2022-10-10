@@ -1,13 +1,23 @@
 import ProfileForm from './profile-form';
-import classes from './user-profile.module.css';
 
 function UserProfile() {
   // Redirect away if NOT auth
 
+  async function changePasswordHandler(passwordData) {
+    const response = await fetch('/api/user/change-password', {
+      method: 'PATCH',
+      BODY: JSON.stringify(passwordData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const data = await response.json();
+  }
+
   return (
-    <section className={classes.profile}>
-      <h1>Your User Profile</h1>
-      <ProfileForm />
+    <section>
+      <ProfileForm onChangePassword={changePasswordHandler} />
     </section>
   );
 }

@@ -83,6 +83,11 @@ function AuthForm() {
           </div>
           <div className={styles.actions}>
             <button>{isLogin ? 'Login' : 'Create Account'}</button>
+            {isLogin && (
+              <button type='>button' className={styles.toggle}>
+                Forgot password?
+              </button>
+            )}
             <button
               type='button'
               className={styles.toggle}
