@@ -1,7 +1,11 @@
 import styles from '../../../styles/Product.module.css';
 import Head from 'next/head';
+import Pricetag from '../../../components/UI/Pricetag';
+import { useSession } from 'next-auth/react';
 
 const Fillings = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className={styles.layout}>
       <Head>
@@ -23,6 +27,7 @@ const Fillings = () => {
           tooth tissue is too damaged to be treated with regular filling methods
           but also solid enough to not require a full crown treatment.
         </p>
+        {session && <Pricetag price={950} discount={11} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

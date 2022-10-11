@@ -1,7 +1,11 @@
 import styles from '../../../styles/Product.module.css';
 import Head from 'next/head';
+import Pricetag from '../../../components/UI/Pricetag';
+import { useSession } from 'next-auth/react';
 
 const Implants = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className={styles.layout}>
       <Head>
@@ -53,6 +57,7 @@ const Implants = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
+        {session && <Pricetag price={1400} discount={14} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

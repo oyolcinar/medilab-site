@@ -1,7 +1,11 @@
 import styles from '../../../styles/Product.module.css';
 import Head from 'next/head';
+import Pricetag from '../../../components/UI/Pricetag';
+import { useSession } from 'next-auth/react';
 
 const PanoramicXray = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className={styles.layout}>
       <Head>
@@ -25,6 +29,7 @@ const PanoramicXray = () => {
           dentists use to diagnose and treat their patients. It is a 2-D
           examination of your mouth with a single image.
         </p>
+        {session && <Pricetag price={200} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

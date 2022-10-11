@@ -1,7 +1,11 @@
 import styles from '../../../styles/Product.module.css';
 import Head from 'next/head';
+import Pricetag from '../../../components/UI/Pricetag';
+import { useSession } from 'next-auth/react';
 
 const PorcelainLaminant = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className={styles.layout}>
       <Head>
@@ -61,6 +65,7 @@ const PorcelainLaminant = () => {
           <br />
           HBsag
         </p>
+        {session && <Pricetag price={500} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

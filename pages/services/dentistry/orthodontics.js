@@ -1,7 +1,11 @@
 import styles from '../../../styles/Product.module.css';
 import Head from 'next/head';
+import Pricetag from '../../../components/UI/Pricetag';
+import { useSession } from 'next-auth/react';
 
 const Orthodontics = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className={styles.layout}>
       <Head>
@@ -37,6 +41,7 @@ const Orthodontics = () => {
           (before the age of 10-12) to use physical growth and bone development
           as an advantage.
         </p>
+        {session && <Pricetag price={1000} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

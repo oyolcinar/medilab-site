@@ -1,7 +1,11 @@
 import styles from '../../../styles/Product.module.css';
 import Head from 'next/head';
+import Pricetag from '../../../components/UI/Pricetag';
+import { useSession } from 'next-auth/react';
 
 const Whitening = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className={styles.layout}>
       <Head>
@@ -53,6 +57,7 @@ const Whitening = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
+        {session && <Pricetag price={750} discount={13} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>
