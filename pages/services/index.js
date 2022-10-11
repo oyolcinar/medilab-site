@@ -1,5 +1,6 @@
 import styles from '../../styles/Terms.module.css';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Services = () => {
   return (
@@ -13,6 +14,23 @@ const Services = () => {
       </Head>
       <div>
         <h2>Services</h2>
+      </div>
+      <div className={styles.boxContainer}>
+        <Link href='/services/dentistry'>
+          <div className={styles.box}>
+            <h3>Dentistry</h3>
+          </div>
+        </Link>
+        <Link href='/services/hair-transplant'>
+          <div className={styles.box}>
+            <h3>Hair Transplant</h3>
+          </div>
+        </Link>
+        <Link href='/services/check-up-packages'>
+          <div className={styles.box}>
+            <h3>Check Up</h3>
+          </div>
+        </Link>
       </div>
     </div>
   );

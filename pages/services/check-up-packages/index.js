@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../../../styles/Terms.module.css';
+import Link from 'next/link';
 
 const CheckUpPackages = () => {
   return (
@@ -9,6 +10,23 @@ const CheckUpPackages = () => {
       </Head>
       <div>
         <h2>Check Up Packages</h2>
+      </div>
+      <div className={styles.boxContainer}>
+        <Link href='/services/check-up-packages/standard-check-up'>
+          <div className={styles.box}>
+            <h3>Standard Check Up</h3>
+          </div>
+        </Link>
+        <Link href='/services/check-up-packages/life-check-up-1'>
+          <div className={styles.box}>
+            <h3>Life Check Up #1</h3>
+          </div>
+        </Link>
+        <Link href='/services/check-up-packages/life-check-up-2'>
+          <div className={styles.box}>
+            <h3>Life Check Up #2</h3>
+          </div>
+        </Link>
       </div>
     </div>
   );
