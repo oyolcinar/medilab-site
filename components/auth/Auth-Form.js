@@ -26,10 +26,16 @@ function AuthForm() {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const [isLogin, setIsLogin] = useState(true);
+  const [isForgot, setIsForgot] = useState(false);
   const router = useRouter();
 
   function switchAuthModeHandler() {
     setIsLogin((prevState) => !prevState);
+    setIsForgot(false);
+  }
+
+  function switchIsForgotHandler() {
+    setIsForgot((prevState) => !prevState);
   }
 
   function redirect() {
@@ -65,27 +71,50 @@ function AuthForm() {
     <div className={styles.container}>
       <section className={styles.auth}>
         <div className={styles.header}>
-          <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
+          <h1>
+            {isForgot ? 'Enter Your Mail' : isLogin ? 'Login' : 'Sign Up'}
+          </h1>
         </div>
         <form onSubmit={submitHandler}>
           <div className={styles.control}>
             <label htmlFor='email'>Email:</label>
             <input type='email' id='email' required ref={emailInputRef} />
           </div>
-          <div className={styles.control}>
-            <label htmlFor='password'>Password:</label>
-            <input
-              type='password'
-              id='password'
-              required
-              ref={passwordInputRef}
-            />
-          </div>
+          {!isForgot && (
+            <div className={styles.control}>
+              <label htmlFor='password'>Password:</label>
+              <input
+                type='password'
+                id='password'
+                required
+                ref={passwordInputRef}
+              />
+            </div>
+          )}
           <div className={styles.actions}>
-            <button>{isLogin ? 'Login' : 'Create Account'}</button>
-            {isLogin && (
-              <button type='>button' className={styles.toggle}>
+            <button>
+              {isForgot
+                ? 'Send New Password'
+                : isLogin
+                ? 'Login'
+                : 'Create Account'}
+            </button>
+            {isLogin && !isForgot && (
+              <button
+                type='button'
+                className={styles.toggle}
+                onClick={setIsForgot}
+              >
                 Forgot password?
+              </button>
+            )}
+            {isForgot && (
+              <button
+                type='button'
+                className={styles.toggle}
+                onClick={switchIsForgotHandler}
+              >
+                Login with existing account
               </button>
             )}
             <button
