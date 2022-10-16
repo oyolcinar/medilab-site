@@ -1,0 +1,42 @@
+{
+  "locales": ["en", "tr", "ru", "ar-ae"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common"],
+    "/": ["home"],
+    "/about": ["about"],
+    "/pricing": ["pricing"],
+    "/services": ["services"],
+    "/policies/privacy-and-cookie-policy": ["privacy-and-cookie-policy"],
+    "/policies/terms-of-service": ["terms-of-service"],
+    "/policies/terms-and-conditions-and-services-agreement": [
+      "service-agreement"
+    ],
+    "/hospitals-and-clinics": ["hospitals-and-clinics"],
+    "/testimonials": ["testimonials"],
+    "/auth": ["auth"],
+    "/services/hair-transplant": ["hair-transplant"],
+    "/services/dentistry": ["dentistry"],
+    "/services/check-up-packages": ["check-up-packages"],
+    "/services/dentistry/zirconium": ["zirconium"],
+    "/services/dentistry/porcelain-laminant": ["porcelain-laminant"],
+    "/services/dentistry/panoramic-xray": ["panoramic-xray"],
+    "/services/dentistry/orthodontics": ["orthodontics"],
+    "/services/dentistry/laser-dentistry": ["laser-dentistry"],
+    "/services/dentistry/fillings": ["fillings"],
+    "/services/dentistry/implants": ["implants"],
+    "/services/dentistry/root-canal-treatment": ["root-canal-treatment"],
+    "/services/dentistry/smile-aesthetics": ["smile-aesthetics"],
+    "/services/dentistry/empress-full-porcelain": ["empress"],
+    "/services/dentistry/whitening": ["whitening"],
+    "/services/hair-transplant/FUT-hair-transplant": ["fut-hair-transplant"],
+    "/services/hair-transplant/DHI-hair-transplant": ["dhi-hair-transplant"],
+    "/services/hair-transplant/sapphire-hair-transplant": [
+      "sapphire-hair-transplant"
+    ],
+    "/services/hair-transplant/FUE-hair-transplant": ["fue-hair-transplant"],
+    "/services/check-up-packages/standard-check-up": ["standard-check-up"],
+    "/services/check-up-packages/life-check-up-1": ["life-check-up-1"],
+    "/services/check-up-packages/life-check-up-2": ["life-check-up-2"]
+  }
+}

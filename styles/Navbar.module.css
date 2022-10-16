@@ -16,7 +16,6 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  max-width: 1100px;
   gap: 20vw;
 }
 
@@ -33,10 +32,28 @@
 }
 
 .list > a:hover {
-  color: #5b5b5b;
+  color: #12aac5;
 }
 
 .dropdown {
   font-size: 0.7rem;
   vertical-align: middle;
+}
+
+.langbox {
+  position: fixed;
+  right: 20px;
+  top: 28px;
+}
+
+.langbox button {
+  cursor: pointer;
+  border: none;
+  color: #12aac5;
+  font-size: 0.7rem;
+  background-color: transparent;
+}
+
+.langbox button:hover {
+  color: #2fbed7;
 }

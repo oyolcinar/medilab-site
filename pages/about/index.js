@@ -1,13 +1,16 @@
 import styles from '../../styles/Terms.module.css';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 const About = () => {
+  const { t } = useTranslation('about');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>About Us | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
-      <h2>About Medilab Estetik</h2>
+      <h2>{t('header')}</h2>
       <p>
         At Medilab Estetik we devoted ourselves to your self-renewal journey.
       </p>

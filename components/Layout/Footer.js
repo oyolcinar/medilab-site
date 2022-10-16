@@ -7,25 +7,28 @@ import {
   IoLogoFacebook,
 } from 'react-icons/io';
 import { HiPhone } from 'react-icons/hi';
+import useTranslation from 'next-translate/useTranslation';
 
 const Footer = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.column}>
-          <h3>CATEGORIES</h3>
+          <h3>{t('categories')}</h3>
           <Link href='/services/hair-transplant'>
-            <a>HAIR TRANSPLANT</a>
+            <a>{t('hairTransplant')}</a>
           </Link>
           <Link href='/services/dentistry'>
-            <a>DENTISTRY</a>
+            <a>{t('dentistry')}</a>
           </Link>
           <Link href='/services/check-up-packages'>
-            <a>CHECK UP PACKAGES</a>
+            <a>{t('checkUp')}</a>
           </Link>
         </div>
         <div className={styles.column}>
-          <h3>RECENT BLOG POSTS</h3>
+          <h3>{t('blogposts')}</h3>
           <Link href='/'>
             <a>BLOG POST #1</a>
           </Link>
@@ -37,19 +40,19 @@ const Footer = () => {
           </Link>
         </div>
         <div className={styles.column}>
-          <h3>CORPORATE</h3>
+          <h3>{t('corporate')}</h3>
           <Link href='/about'>
-            <a>ABOUT US</a>
+            <a>{t('about')}</a>
           </Link>
           <Link href='/hospitals-and-clinics'>
-            <a>HOSPITALS AND CLINICS</a>
+            <a>{t('hospitals')}</a>
           </Link>
           <Link href='/testimonials'>
-            <a>TESTIMONIALS</a>
+            <a>{t('testimonials')}</a>
           </Link>
         </div>
         <div className={styles.column}>
-          <h3>CONTACT US</h3>
+          <h3>{t('contact')}</h3>
           <Link href='/'>
             <a>
               Büyükdere Caddesi Tankaya Palas
@@ -90,15 +93,15 @@ const Footer = () => {
       </div>
       <div className={styles.terms}>
         <Link href='/policies/privacy-and-cookie-policy'>
-          <a>Privacy Policy And Cookie Policy</a>
+          <a>{t('privacy')}</a>
         </Link>
         <div>|</div>
         <Link href='/policies/terms-of-service'>
-          <a>Website Terms Of Service</a>
+          <a>{t('service')}</a>
         </Link>
         <div>|</div>
         <Link href='/policies/terms-and-conditions-and-services-agreement'>
-          <a>Terms Conditions And Services Agreement</a>
+          <a>{t('conditions')}</a>
         </Link>
       </div>
       <div>
