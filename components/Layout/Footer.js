@@ -108,7 +108,11 @@ const Footer = () => {
         <p>
           Copyright © 2022, Medilab Estetik,
           <Link href='https://www.medilabassist.com.tr/en-US/'>
-            <a target='_blank' rel='noopener noreferrer'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.lastLink}
+            >
               MedilabAssist
             </a>
           </Link>

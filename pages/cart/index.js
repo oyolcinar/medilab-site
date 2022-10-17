@@ -1,11 +1,14 @@
 import { getSession } from 'next-auth/react';
+import styles from '../../styles/Terms.module.css';
+import CartComponent from '../../components/Cart/Cart';
 
 const Cart = () => {
   return (
-    <div>
+    <div className={styles.terms}>
       <div>
         <h2>Cart</h2>
       </div>
+      <CartComponent />
     </div>
   );
 };
