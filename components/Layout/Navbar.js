@@ -3,7 +3,7 @@ import styles from '../../styles/Navbar.module.css';
 import ButtonLarge from '../UI/ButtonLarge';
 import { useState } from 'react';
 import DropdownMenu from '../UI/DropdownMenu';
-import { IoLogoClosedCaptioning, IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdArrowDropdown } from 'react-icons/io';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';

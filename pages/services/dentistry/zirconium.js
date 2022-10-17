@@ -60,7 +60,7 @@ const Zirconium = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1000} />}
+        {session && <Pricetag newPrice={1000} />}
       </div>
 
       <div className={styles.details}>

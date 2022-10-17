@@ -67,7 +67,7 @@ const DHIHairTransplant = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1550} discount={5} />}
+        {session && <Pricetag price={1550} newPrice={1470} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

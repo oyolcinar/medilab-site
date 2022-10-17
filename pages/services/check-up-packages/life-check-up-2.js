@@ -63,7 +63,7 @@ const LifeCheckUpTwo = () => {
             for the dinner before check up
           </li>
         </ul>
-        {session && <Pricetag price={200} discount={15} />}
+        {session && <Pricetag price={200} newPrice={170} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

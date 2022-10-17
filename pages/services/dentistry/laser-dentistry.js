@@ -67,7 +67,7 @@ const LaserDentistry = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1200} discount={8} />}
+        {session && <Pricetag price={1200} newPrice={1100} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

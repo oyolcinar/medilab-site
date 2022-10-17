@@ -1,28 +1,22 @@
 import styles from '../../styles/Pricetag.module.css';
 
-const Pricetag = ({ price, discount }) => {
-  function afterSales(price, discount) {
-    if (!discount) {
-      return price;
-    } else {
-      let newPrice = price - (price / 100) * discount;
-      return newPrice;
-    }
+const Pricetag = ({ price, newPrice }) => {
+  function discount(price, newPrice) {
+    let discount = Math.trunc(((price - newPrice) / price) * 100);
+    return discount;
   }
   return (
     <div className={styles.container}>
       <div className={styles.border}></div>
       <div className={styles.tag}>
-        {discount && (
+        {price && (
           <div className={styles.discount}>
-            <div>%{discount} Off</div>
+            <div>%{discount(price, newPrice)} Off</div>
           </div>
         )}
         <div className={styles.prices}>
-          {discount && <div className={styles.oldPrice}>{price} EUR + VAT</div>}
-          <div className={styles.newPrice}>
-            {afterSales(price, discount)} EUR + VAT
-          </div>
+          {price && <div className={styles.oldPrice}>{price} EUR + VAT</div>}
+          <div className={styles.newPrice}>{newPrice} EUR + VAT</div>
         </div>
         <button className={styles.button}>Add To Cart</button>
       </div>

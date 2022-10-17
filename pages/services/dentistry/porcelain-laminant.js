@@ -65,7 +65,7 @@ const PorcelainLaminant = () => {
           <br />
           HBsag
         </p>
-        {session && <Pricetag price={500} />}
+        {session && <Pricetag newPrice={500} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

@@ -57,7 +57,7 @@ const Whitening = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={750} discount={13} />}
+        {session && <Pricetag price={750} newPrice={650} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

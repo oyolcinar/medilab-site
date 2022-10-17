@@ -27,15 +27,18 @@ function AuthForm() {
   const passwordInputRef = useRef();
   const [isLogin, setIsLogin] = useState(true);
   const [isForgot, setIsForgot] = useState(false);
+  const [isPasswordValid, setIsPasswordValid] = useState(true);
   const router = useRouter();
 
   function switchAuthModeHandler() {
     setIsLogin((prevState) => !prevState);
     setIsForgot(false);
+    setIsPasswordValid(true);
   }
 
   function switchIsForgotHandler() {
     setIsForgot((prevState) => !prevState);
+    setIsPasswordValid(true);
   }
 
   function redirect() {
@@ -47,7 +50,12 @@ function AuthForm() {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    /* validation */
+    if (enteredPassword.length < 8) {
+      setIsPasswordValid(false);
+      return;
+    }
+
+    setIsPasswordValid(true);
 
     if (isLogin) {
       const result = await signIn('credentials', {
@@ -82,7 +90,14 @@ function AuthForm() {
           </div>
           {!isForgot && (
             <div className={styles.control}>
-              <label htmlFor='password'>Password:</label>
+              <label htmlFor='password'>
+                Password:
+                {!isPasswordValid && !isForgot && (
+                  <span className={styles.warning}>
+                    The password must be at least 8 characters.
+                  </span>
+                )}
+              </label>
               <input
                 type='password'
                 id='password'

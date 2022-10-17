@@ -61,7 +61,7 @@ const EmpressFullPorcelain = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1000} discount={5} />}
+        {session && <Pricetag price={1000} newPrice={950} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

@@ -69,7 +69,7 @@ const RootCanalTreatment = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1500} discount={13} />}
+        {session && <Pricetag price={1500} newPrice={1300} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

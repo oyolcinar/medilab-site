@@ -34,6 +34,7 @@
   margin-bottom: 0.7rem;
 }
 
+
 .control label {
   display: block;
   color: black;
@@ -95,4 +96,9 @@
   background-color: transparent;
   color: #2fbed7;
   font-size: 0.7rem;
+}
+
+.warning {
+  margin-left: 0.2rem;
+  color: red;
 }

@@ -27,7 +27,7 @@ const Fillings = () => {
           tooth tissue is too damaged to be treated with regular filling methods
           but also solid enough to not require a full crown treatment.
         </p>
-        {session && <Pricetag price={950} discount={11} />}
+        {session && <Pricetag price={950} newPrice={850} />}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>
