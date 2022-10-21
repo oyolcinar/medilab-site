@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
         <div className={styles.column}>
           <h3>{t('contact')}</h3>
-          <Link href='/'>
+          <Link href='/contact'>
             <a>
               Büyükdere Caddesi Tankaya Palas
               <br />

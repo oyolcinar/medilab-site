@@ -1,10 +1,14 @@
 import { getSession } from 'next-auth/react';
 import styles from '../../styles/Terms.module.css';
 import CartComponent from '../../components/Cart/Cart';
+import Head from 'next/head';
 
 const Cart = () => {
   return (
     <div className={styles.terms}>
+      <Head>
+        <title>Your Cart | Medilab Estetik</title>
+      </Head>
       <div>
         <h2>Cart</h2>
       </div>
