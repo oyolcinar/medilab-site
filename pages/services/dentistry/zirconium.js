@@ -60,7 +60,7 @@ const Zirconium = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag newPrice={1000} />}
+        {session && <Pricetag newPrice={1000} name='Zirconium' code='ZRC01' />}
       </div>
 
       <div className={styles.details}>

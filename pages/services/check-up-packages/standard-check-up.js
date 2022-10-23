@@ -63,7 +63,14 @@ const StandardCheckUp = () => {
             for the dinner before check up
           </li>
         </ul>
-        {session && <Pricetag price={140} newPrice={120} />}
+        {session && (
+          <Pricetag
+            price={140}
+            newPrice={120}
+            name='Standard Check Up'
+            code='SCUP01'
+          />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

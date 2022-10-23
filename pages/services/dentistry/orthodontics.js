@@ -41,7 +41,9 @@ const Orthodontics = () => {
           (before the age of 10-12) to use physical growth and bone development
           as an advantage.
         </p>
-        {session && <Pricetag newPrice={1000} />}
+        {session && (
+          <Pricetag newPrice={1000} name='Orthodontics' code='ORTH01' />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

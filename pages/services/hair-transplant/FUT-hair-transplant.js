@@ -60,7 +60,14 @@ const FUTHairTransplant = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1550} newPrice={1470} />}
+        {session && (
+          <Pricetag
+            price={1550}
+            newPrice={1470}
+            name='FUT Hair Transplant'
+            code='FUT01'
+          />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

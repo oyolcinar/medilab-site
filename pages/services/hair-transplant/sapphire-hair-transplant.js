@@ -63,7 +63,14 @@ const SapphireHairTransplant = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1750} newPrice={1650} />}
+        {session && (
+          <Pricetag
+            price={1750}
+            newPrice={1650}
+            name='Sapphire Hair Transplant'
+            code='SHT01'
+          />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

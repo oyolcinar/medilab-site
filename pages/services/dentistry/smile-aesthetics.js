@@ -59,7 +59,14 @@ const SmileAesthetics = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag newPrice={1000} price={1200} />}
+        {session && (
+          <Pricetag
+            newPrice={1000}
+            price={1200}
+            name='Smile Aesthetics'
+            code='SA01'
+          />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

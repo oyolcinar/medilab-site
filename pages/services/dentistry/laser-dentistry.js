@@ -67,7 +67,14 @@ const LaserDentistry = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1200} newPrice={1100} />}
+        {session && (
+          <Pricetag
+            price={1200}
+            newPrice={1100}
+            name='Laser Dentistry'
+            code='LD01'
+          />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

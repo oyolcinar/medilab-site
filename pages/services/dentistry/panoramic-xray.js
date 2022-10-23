@@ -29,7 +29,9 @@ const PanoramicXray = () => {
           dentists use to diagnose and treat their patients. It is a 2-D
           examination of your mouth with a single image.
         </p>
-        {session && <Pricetag newPrice={200} />}
+        {session && (
+          <Pricetag newPrice={200} name='Panoramic Xray' code='PXRAY01' />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

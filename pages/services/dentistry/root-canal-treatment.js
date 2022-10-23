@@ -69,7 +69,14 @@ const RootCanalTreatment = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1500} newPrice={1300} />}
+        {session && (
+          <Pricetag
+            price={1500}
+            newPrice={1300}
+            name='Root Canal Treatment'
+            code='RCT01'
+          />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

@@ -59,11 +59,18 @@ const LifeCheckUpOne = () => {
             collection)
           </li>
           <li>
-            Consume a light meal (rich in fat and low carbohydratevegetables)
+            Consume a light meal (rich in fat and low carbohydrate vegetables)
             for the dinner before check up
           </li>
         </ul>
-        {session && <Pricetag price={250} newPrice={200} />}
+        {session && (
+          <Pricetag
+            price={250}
+            newPrice={200}
+            name='Life Check Up #1'
+            code='LCUP01'
+          />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

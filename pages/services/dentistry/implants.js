@@ -57,7 +57,9 @@ const Implants = () => {
             You can check your hotel options after pressing add to cart button.
           </b>
         </p>
-        {session && <Pricetag price={1400} discount={1200} />}
+        {session && (
+          <Pricetag price={1400} discount={1200} name='Implants' code='IMP01' />
+        )}
       </div>
       <div className={styles.details}>
         <div className={styles.header}>

@@ -1,6 +1,7 @@
 import styles from '../../styles/Pricetag.module.css';
+import { addToCart } from '../../utils/AddCart';
 
-const Pricetag = ({ price, newPrice }) => {
+const Pricetag = ({ name, code, price, newPrice }) => {
   function discount(price, newPrice) {
     let discount = Math.trunc(((price - newPrice) / price) * 100);
     return discount;
@@ -18,7 +19,14 @@ const Pricetag = ({ price, newPrice }) => {
           {price && <div className={styles.oldPrice}>{price} EUR + VAT</div>}
           <div className={styles.newPrice}>{newPrice} EUR + VAT</div>
         </div>
-        <button className={styles.button}>Add To Cart</button>
+        <button
+          className={styles.button}
+          onClick={() => {
+            addToCart(name, code, newPrice);
+          }}
+        >
+          Add To Cart
+        </button>
       </div>
       <div className={styles.border}></div>
     </div>
