@@ -73,6 +73,7 @@ const LaserDentistry = () => {
             newPrice={1100}
             name='Laser Dentistry'
             code='LD01'
+            query='/services/dentistry/laser-dentistry'
           />
         )}
       </div>

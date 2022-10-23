@@ -66,7 +66,12 @@ const PorcelainLaminant = () => {
           HBsag
         </p>
         {session && (
-          <Pricetag newPrice={500} name='Porcelain Laminant' code='PRCL01' />
+          <Pricetag
+            newPrice={500}
+            name='Porcelain Laminant'
+            code='PRCL01'
+            query='/services/dentistry/porcelain-laminant'
+          />
         )}
       </div>
       <div className={styles.details}>

@@ -8,8 +8,11 @@ import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import setLanguage from 'next-translate/setLanguage';
+import { useContext } from 'react';
+import { Store } from '../../utils/Store';
 
 const Navbar = () => {
+  const { state } = useContext(Store);
   const router = useRouter();
   const { data: session, status } = useSession();
   const loading = status === 'loading';
@@ -60,7 +63,23 @@ const Navbar = () => {
                 </a>
               </Link>
               <Link href='/blog'>{t('blog')}</Link>
-              {session && <Link href='/cart'>CART</Link>}
+              {session && (
+                <Link href='/cart'>
+                  <a>
+                    CART
+                    {state.cart.cartItems.length > 0 && (
+                      <span>
+                        (
+                        {state.cart.cartItems.reduce(
+                          (a, c) => a + c.quantity,
+                          0,
+                        )}
+                        )
+                      </span>
+                    )}
+                  </a>
+                </Link>
+              )}
               {!session && !loading && (
                 <ButtonLarge name='Login' onClick={loginHandler} />
               )}

@@ -1,7 +1,22 @@
 import styles from '../../styles/Pricetag.module.css';
-import { addToCart } from '../../utils/AddCart';
+import { useContext } from 'react';
+import { Store } from '../../utils/Store';
 
-const Pricetag = ({ name, code, price, newPrice }) => {
+const Pricetag = ({ name, code, price, newPrice, query }) => {
+  const { state, dispatch } = useContext(Store);
+
+  function addToCart(name, code, price, query) {
+    const product = { name: name, code: code, price: price, query: query };
+
+    const existItem = state.cart.cartItems.find(
+      (item) => item.code === product.code,
+    );
+
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+
+    dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
+  }
+
   function discount(price, newPrice) {
     let discount = Math.trunc(((price - newPrice) / price) * 100);
     return discount;
@@ -22,7 +37,7 @@ const Pricetag = ({ name, code, price, newPrice }) => {
         <button
           className={styles.button}
           onClick={() => {
-            addToCart(name, code, newPrice);
+            addToCart(name, code, newPrice, query);
           }}
         >
           Add To Cart

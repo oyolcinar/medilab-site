@@ -69,6 +69,7 @@ const SapphireHairTransplant = () => {
             newPrice={1650}
             name='Sapphire Hair Transplant'
             code='SHT01'
+            query='/services/hair-transplant/sapphire-hair-transplant'
           />
         )}
       </div>

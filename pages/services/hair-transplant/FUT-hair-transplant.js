@@ -66,6 +66,7 @@ const FUTHairTransplant = () => {
             newPrice={1470}
             name='FUT Hair Transplant'
             code='FUT01'
+            query='/services/hair-transplant/FUT-hair-transplant'
           />
         )}
       </div>

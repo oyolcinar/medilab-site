@@ -42,7 +42,12 @@ const Orthodontics = () => {
           as an advantage.
         </p>
         {session && (
-          <Pricetag newPrice={1000} name='Orthodontics' code='ORTH01' />
+          <Pricetag
+            newPrice={1000}
+            name='Orthodontics'
+            code='ORTH01'
+            query='/services/dentistry/orthodontics'
+          />
         )}
       </div>
       <div className={styles.details}>

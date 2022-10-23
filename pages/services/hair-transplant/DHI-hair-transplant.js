@@ -73,6 +73,7 @@ const DHIHairTransplant = () => {
             newPrice={1470}
             name='DHI Hair Transplant'
             code='DHI01'
+            query='/services/hair-transplant/DHI-hair-transplant'
           />
         )}
       </div>

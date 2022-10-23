@@ -30,7 +30,12 @@ const PanoramicXray = () => {
           examination of your mouth with a single image.
         </p>
         {session && (
-          <Pricetag newPrice={200} name='Panoramic Xray' code='PXRAY01' />
+          <Pricetag
+            newPrice={200}
+            name='Panoramic Xray'
+            code='PXRAY01'
+            query='/services/dentistry/panoramic-xray'
+          />
         )}
       </div>
       <div className={styles.details}>

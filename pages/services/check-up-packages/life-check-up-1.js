@@ -69,6 +69,7 @@ const LifeCheckUpOne = () => {
             newPrice={200}
             name='Life Check Up #1'
             code='LCUP01'
+            query='/services/check-up-packages/life-check-up-1'
           />
         )}
       </div>

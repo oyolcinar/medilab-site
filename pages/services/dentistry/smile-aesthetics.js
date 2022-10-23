@@ -65,6 +65,7 @@ const SmileAesthetics = () => {
             price={1200}
             name='Smile Aesthetics'
             code='SA01'
+            query='/services/dentistry/smile-aesthetics'
           />
         )}
       </div>

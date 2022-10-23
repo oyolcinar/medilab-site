@@ -28,7 +28,13 @@ const Fillings = () => {
           but also solid enough to not require a full crown treatment.
         </p>
         {session && (
-          <Pricetag price={950} newPrice={850} name='Fillings' code='Fl01' />
+          <Pricetag
+            price={950}
+            newPrice={850}
+            name='Fillings'
+            code='Fl01'
+            query='/services/dentistry/fillings'
+          />
         )}
       </div>
       <div className={styles.details}>

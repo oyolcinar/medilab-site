@@ -67,6 +67,7 @@ const EmpressFullPorcelain = () => {
             newPrice={950}
             name='Empress (Full Porcelain)'
             code='EFP01'
+            query='/services/dentistry/empress-full-porcelain'
           />
         )}
       </div>

@@ -75,6 +75,7 @@ const RootCanalTreatment = () => {
             newPrice={1300}
             name='Root Canal Treatment'
             code='RCT01'
+            query='/services/dentistry/root-canal-treatment'
           />
         )}
       </div>

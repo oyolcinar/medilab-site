@@ -58,7 +58,13 @@ const Whitening = () => {
           </b>
         </p>
         {session && (
-          <Pricetag price={750} newPrice={650} name='Whitening' code='WHI01' />
+          <Pricetag
+            price={750}
+            newPrice={650}
+            name='Whitening'
+            code='WHI01'
+            query='/services/dentistry/whitening'
+          />
         )}
       </div>
       <div className={styles.details}>

@@ -1,0 +1,17 @@
+.container {
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.details {
+  cursor: pointer;
+  width: 20%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

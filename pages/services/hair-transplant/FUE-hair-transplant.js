@@ -63,6 +63,7 @@ const FUEHairTransplant = () => {
             newPrice={1650}
             name='FUE Hair Transplant'
             code='YZ20986'
+            query='/services/hair-transplant/FUE-hair-transplant'
           />
         )}
       </div>

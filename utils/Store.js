@@ -10,16 +10,17 @@ function reducer(state, action) {
   switch (action.type) {
     case 'CART_ADD_ITEM': {
       const newItem = action.payload;
+      console.log(newItem);
 
       const existItem = state.cart.cartItems.find(
-        (item) => item.slug === newItem.slug,
+        (item) => item.code === newItem.code,
       );
 
       const cartItems = existItem
-        ? state.cart.cartItem.map((item) =>
+        ? state.cart.cartItems.map((item) =>
             item.name === existItem.name ? newItem : item,
           )
-        : [...state.cart.cartItem, newItem];
+        : [...state.cart.cartItems, newItem];
       return { ...state, cart: { ...state.cart, cartItems } };
     }
     default:
@@ -29,6 +30,8 @@ function reducer(state, action) {
 
 export function StoreProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   const value = { state, dispatch };
-  return <StoreProvider value={value}>{children}</StoreProvider>;
+
+  return <Store.Provider value={value}>{children}</Store.Provider>;
 }

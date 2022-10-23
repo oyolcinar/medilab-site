@@ -69,6 +69,7 @@ const StandardCheckUp = () => {
             newPrice={120}
             name='Standard Check Up'
             code='SCUP01'
+            query='/services/check-up-packages/standard-check-up'
           />
         )}
       </div>
