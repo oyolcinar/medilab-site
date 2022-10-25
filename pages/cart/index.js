@@ -9,9 +9,6 @@ const Cart = () => {
       <Head>
         <title>Your Cart | Medilab Estetik</title>
       </Head>
-      <div>
-        <h2>Cart</h2>
-      </div>
       <CartComponent />
     </div>
   );

@@ -1,9 +1,11 @@
 import styles from '../../styles/Pricetag.module.css';
 import { useContext } from 'react';
 import { Store } from '../../utils/Store';
+import { useRouter } from 'next/router';
 
 const Pricetag = ({ name, code, price, newPrice, query }) => {
   const { state, dispatch } = useContext(Store);
+  const router = useRouter();
 
   function addToCart(name, code, price, query) {
     const product = { name: name, code: code, price: price, query: query };
@@ -15,6 +17,7 @@ const Pricetag = ({ name, code, price, newPrice, query }) => {
     const quantity = existItem ? existItem.quantity + 1 : 1;
 
     dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
+    router.push('/cart');
   }
 
   function discount(price, newPrice) {
