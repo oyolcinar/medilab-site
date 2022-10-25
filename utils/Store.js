@@ -33,31 +33,32 @@ function reducer(state, action) {
     case 'CART_INCREMENT_ITEM': {
       const cartItems = state.cart.cartItems.map((item) => {
         if (item.code === action.payload.code) {
-          return {
-            ...item,
-            quantity: item.quantity + 1,
-          };
+          const newQuantity = item.quantity + 1;
+          return { ...item, quantity: newQuantity };
+        } else {
+          return item;
         }
       });
-
       return { ...state, cart: { ...state.cart, cartItems } };
     }
 
     case 'CART_DECREMENT_ITEM': {
+      if (action.payload.quantity === 1) {
+        const cartItems = state.cart.cartItems.filter(
+          (item) => item.code !== action.payload.code,
+        );
+        return { ...state, cart: { ...state.cart, cartItems } };
+      }
+
       const cartItems = state.cart.cartItems.map((item) => {
         if (
           item.code === action.payload.code &&
           action.payload.quantity !== 1
         ) {
-          return {
-            ...item,
-            quantity: item.quantity - 1,
-          };
-        } else if (action.payload.quantity === 1) {
-          const cartItems = state.cart.cartItems.filter(
-            (item) => item.code !== action.payload.code,
-          );
-          return { ...state, cart: { ...state.cart, cartItems } };
+          const newQuantity = item.quantity - 1;
+          return { ...item, quantity: newQuantity };
+        } else {
+          return item;
         }
       });
 

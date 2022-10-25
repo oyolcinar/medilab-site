@@ -3,7 +3,6 @@ import { Store } from '../../utils/Store';
 import styles from '../../styles/Cart.module.css';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
-import { FaPlus, FaMinus } from 'react-icons/fa';
 import ButtonLarge from '../UI/ButtonLarge';
 
 const Cart = () => {
@@ -15,10 +14,12 @@ const Cart = () => {
 
   const incrementItemHandler = (item) => {
     dispatch({ type: 'CART_INCREMENT_ITEM', payload: item });
+    console.log(state.cart.cartItems);
   };
 
   const decrementItemHandler = (item) => {
     dispatch({ type: 'CART_DECREMENT_ITEM', payload: item });
+    console.log(state.cart.cartItems);
   };
 
   let total = 0;
@@ -48,8 +49,8 @@ const Cart = () => {
           />
         </td>
         <td className={styles.priceCell}>{item.price} €</td>
-        <td className={styles.priceCell}>{total} €</td>
-        <td className={styles.tableCell}>
+        <td className={styles.totalCell}>{total} €</td>
+        <td className={styles.removeCell}>
           <button
             className={styles.remove}
             onClick={() => removeItemHandler(item)}
@@ -79,9 +80,9 @@ const Cart = () => {
             <thead className={styles.tableHeader}>
               <tr>
                 <th className={styles.infoCell}>Product</th>
-                <th>Quantity</th>
+                <th className={styles.tableCell}>Quantity</th>
                 <th className={styles.priceCell}>Unit Price</th>
-                <th className={styles.priceCell}>Total</th>
+                <th className={styles.totalCell}>Total</th>
                 <th></th>
               </tr>
             </thead>

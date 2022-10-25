@@ -68,10 +68,22 @@
 
 .tableCell {
   text-align: center;
+  width: 110px;
 }
 
 .priceCell {
   text-align: right;
+  width: 100px;
+}
+
+.totalCell {
+  text-align: right;
+  width: 100px;
+}
+
+.removeCell {
+  text-align: center;
+  width: 60px;
 }
 
 .cartItem td {
