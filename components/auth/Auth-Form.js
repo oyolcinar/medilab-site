@@ -28,22 +28,26 @@ function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
   const [isForgot, setIsForgot] = useState(false);
   const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const [loginResError, setLoginResError] = useState();
   const router = useRouter();
 
   function switchAuthModeHandler() {
     setIsLogin((prevState) => !prevState);
     setIsForgot(false);
     setIsPasswordValid(true);
+    setLoginResError('');
   }
 
   function switchIsForgotHandler() {
     setIsForgot((prevState) => !prevState);
     setIsPasswordValid(true);
+    setLoginResError('');
   }
 
   function redirect() {
     router.push('/');
   }
+
   async function submitHandler(event) {
     event.preventDefault();
 
@@ -58,19 +62,27 @@ function AuthForm() {
     setIsPasswordValid(true);
 
     if (isLogin) {
-      const result = await signIn('credentials', {
-        redirect: false,
-        email: enteredEmail,
-        password: enteredPassword,
-      });
-      redirect();
-      console.log(result);
+      try {
+        const result = await signIn('credentials', {
+          redirect: false,
+          email: enteredEmail,
+          password: enteredPassword,
+        });
+
+        if (result.error) {
+          setLoginResError(result.error);
+        } else {
+          redirect();
+        }
+      } catch (error) {
+        setLoginResError(error.message);
+      }
     } else {
       try {
         const result = await createUser(enteredEmail, enteredPassword);
         console.log(result);
       } catch (error) {
-        console.log(error);
+        setLoginResError(error.message);
       }
     }
   }
@@ -85,7 +97,17 @@ function AuthForm() {
         </div>
         <form onSubmit={submitHandler}>
           <div className={styles.control}>
-            <label htmlFor='email'>Email:</label>
+            <label htmlFor='email'>
+              Email:
+              {isLogin && !isForgot && loginResError === 'User not found.' && (
+                <span className={styles.warning}>{loginResError}</span>
+              )}
+              {!isLogin &&
+                !isForgot &&
+                loginResError === 'User already exists.' && (
+                  <span className={styles.warning}>{loginResError}</span>
+                )}
+            </label>
             <input type='email' id='email' required ref={emailInputRef} />
           </div>
           {!isForgot && (
@@ -96,6 +118,9 @@ function AuthForm() {
                   <span className={styles.warning}>
                     The password must be at least 8 characters.
                   </span>
+                )}
+                {isLogin && loginResError === 'Incorrect password.' && (
+                  <span className={styles.warning}>{loginResError}</span>
                 )}
               </label>
               <input

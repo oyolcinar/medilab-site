@@ -60,7 +60,7 @@ const Implants = () => {
         {session && (
           <Pricetag
             price={1400}
-            discount={1200}
+            newPrice={1200}
             name='Implants'
             code='IMP01'
             query='/services/dentistry/implants'

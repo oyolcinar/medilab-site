@@ -37,7 +37,7 @@ async function handler(req, res) {
     .collection('users')
     .insertOne({ email: email, password: hashedPassword });
 
-  res.status(201).json({ message: 'Created User' });
+  res.status(201).json({ message: 'Created User.' });
   client.close();
 }
 
