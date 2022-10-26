@@ -8,7 +8,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import setLanguage from 'next-translate/setLanguage';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Store } from '../../utils/Store';
 
 const Navbar = () => {
@@ -19,6 +19,11 @@ const Navbar = () => {
   const { t } = useTranslation('common');
 
   const [open, setOpen] = useState(false);
+  const [cartItemsCount, setCartItemsCount] = useState(0);
+
+  useEffect(() => {
+    setCartItemsCount(state.cart.cartItems.reduce((a, c) => a + c.quantity, 0));
+  }, [state.cart.cartItems]);
 
   function toggleDropdown() {
     setOpen((prevState) => !prevState);
@@ -67,16 +72,7 @@ const Navbar = () => {
                 <Link href='/cart'>
                   <a>
                     CART
-                    {state.cart.cartItems.length > 0 && (
-                      <span>
-                        (
-                        {state.cart.cartItems.reduce(
-                          (a, c) => a + c.quantity,
-                          0,
-                        )}
-                        )
-                      </span>
-                    )}
+                    {cartItemsCount > 0 && <span>({cartItemsCount})</span>}
                   </a>
                 </Link>
               )}

@@ -4,6 +4,7 @@ import styles from '../../styles/Cart.module.css';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import ButtonLarge from '../UI/ButtonLarge';
+import dynamic from 'next/dynamic';
 
 const Cart = () => {
   const { state, dispatch } = useContext(Store);
@@ -105,4 +106,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default dynamic(() => Promise.resolve(Cart), { ssr: false });
