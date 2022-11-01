@@ -1,4 +1,4 @@
-import AuthForm from '../components/auth/Auth-Form';
+import AuthForm from '../../components/auth/Auth-Form';
 import { getSession } from 'next-auth/react';
 
 function AuthPage() {

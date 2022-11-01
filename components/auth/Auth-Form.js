@@ -52,7 +52,11 @@ function AuthForm() {
     event.preventDefault();
 
     const enteredEmail = emailInputRef.current.value;
-    const enteredPassword = passwordInputRef.current.value;
+    const enteredPassword = isForgot ? ' ' : passwordInputRef.current.value;
+
+    if (isForgot) {
+      signIn('email', { email: enteredEmail });
+    }
 
     if (enteredPassword.length < 8) {
       setIsPasswordValid(false);

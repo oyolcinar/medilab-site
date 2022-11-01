@@ -102,3 +102,21 @@
   margin-left: 0.2rem;
   color: red;
 }
+
+.auth p {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.auth a {
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #12aac5;
+}
+
+.auth a:hover {
+  color: #2fbed7;
+}
