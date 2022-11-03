@@ -9,6 +9,7 @@ import clientPromise from '../../../lib/mongodb';
 export default NextAuth({
   pages: { verifyRequest: '/auth/verify-request', error: '/auth/error' },
   adapter: MongoDBAdapter(clientPromise),
+  secret: process.env.JWT_SECRET,
   session: {
     strategy: 'jwt',
   },
