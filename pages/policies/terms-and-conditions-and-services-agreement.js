@@ -1,16 +1,17 @@
 import Link from 'next/link';
 import styles from '../../styles/Terms.module.css';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 const TermsAndConditions = () => {
+  const { t } = useTranslation('terms-page');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>
-          Terms & Conditions and Services Agreement | Medilab Estetik
-        </title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
-      <h2>Terms & Conditions and Services Agreement</h2>
+      <h2>{t('header')}</h2>
       <p>
         <b>Terms And Conditions Of Medilab Estetik Services Agreement</b>
       </p>

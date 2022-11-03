@@ -2,12 +2,15 @@ import { getSession } from 'next-auth/react';
 import styles from '../../styles/Terms.module.css';
 import CartComponent from '../../components/Cart/Cart';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 const Cart = () => {
+  const { t } = useTranslation('cart-page');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Your Cart | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
       <CartComponent />
     </div>

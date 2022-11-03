@@ -71,7 +71,7 @@ const Navbar = () => {
               {session && (
                 <Link href='/cart'>
                   <a>
-                    CART
+                    {t('cart')}
                     {cartItemsCount > 0 && <span>({cartItemsCount})</span>}
                   </a>
                 </Link>

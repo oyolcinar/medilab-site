@@ -1,14 +1,17 @@
 import Head from 'next/head';
 import styles from '../../styles/Terms.module.css';
+import useTranslation from 'next-translate/useTranslation';
 
 const Contact = () => {
+  const { t } = useTranslation('contact-page');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Contact Us | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
       <div>
-        <h2>Contact Us</h2>
+        <h2>{t('header')}</h2>
       </div>
     </div>
   );

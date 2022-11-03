@@ -1,19 +1,22 @@
 import styles from '../../styles/Terms.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
 
 const Services = () => {
+  const { t } = useTranslation('services-page');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Services | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
         <meta
           name='description'
           content='Services provided by Medilab Estetik'
         />
       </Head>
       <div>
-        <h2>Services</h2>
+        <h2>{t('header')}</h2>
       </div>
       <div className={styles.boxContainer}>
         <Link href='/services/dentistry'>

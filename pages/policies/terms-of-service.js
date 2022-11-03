@@ -1,13 +1,16 @@
 import styles from '../../styles/Terms.module.css';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 const TermOfService = () => {
+  const { t } = useTranslation('service-page');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Website Terms of Service | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
-      <h2>Website Terms of Service</h2>
+      <h2>{t('header')}</h2>
       <p>
         <b>medilabestetik.com Web Site Terms Of Service</b>
       </p>

@@ -1,13 +1,16 @@
 import styles from '../../styles/Terms.module.css';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 const HospitalsAndClinics = () => {
+  const { t } = useTranslation('hospitals-page');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Hospitals & Clinics | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
-      <h2>Hospitals and Clinics</h2>
+      <h2>{t('header')}</h2>
       <p>
         <b>MEDILAB ASSIST</b>
       </p>

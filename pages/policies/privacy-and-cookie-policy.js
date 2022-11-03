@@ -1,14 +1,17 @@
 import styles from '../../styles/Terms.module.css';
 import Link from 'next/link';
 import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation('privacy-page');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Privacy and Cookie Policy | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
-      <h2>Privacy and Cookie Policy</h2>
+      <h2>{t('header')}</h2>
       <p>
         <b>Medilab Estetik Privacy Policy And Cookie Policy</b>
       </p>
