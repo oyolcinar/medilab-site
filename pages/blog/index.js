@@ -3,7 +3,7 @@ import styles from '../../styles/Terms.module.css';
 import Head from 'next/head';
 
 const Blog = () => {
-  const { t } = useTranslation('blog-page');
+  const { t } = useTranslation('blog');
 
   return (
     <div className={styles.terms}>

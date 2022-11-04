@@ -5,7 +5,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 const Cart = () => {
-  const { t } = useTranslation('cart-page');
+  const { t } = useTranslation('cart');
 
   return (
     <div className={styles.terms}>

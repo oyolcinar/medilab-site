@@ -1,15 +1,18 @@
 import Head from 'next/head';
 import styles from '../../../styles/Terms.module.css';
 import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
 
 const CheckUpPackages = () => {
+  const { t } = useTranslation('check-up-packages');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Check Up Packages | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
       <div>
-        <h2>Check Up Packages</h2>
+        <h2>{t('header')}</h2>
       </div>
       <div className={styles.boxContainer}>
         <Link href='/services/check-up-packages/standard-check-up'>

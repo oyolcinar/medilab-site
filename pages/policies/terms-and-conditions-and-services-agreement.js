@@ -4,7 +4,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 const TermsAndConditions = () => {
-  const { t } = useTranslation('terms-page');
+  const { t } = useTranslation('service-agreement');
 
   return (
     <div className={styles.terms}>

@@ -4,7 +4,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 const PrivacyPolicy = () => {
-  const { t } = useTranslation('privacy-page');
+  const { t } = useTranslation('privacy-and-cookie-policy');
 
   return (
     <div className={styles.terms}>

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 const HospitalsAndClinics = () => {
-  const { t } = useTranslation('hospitals-page');
+  const { t } = useTranslation('hospitals-and-clinics');
 
   return (
     <div className={styles.terms}>

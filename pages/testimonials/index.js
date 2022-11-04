@@ -3,7 +3,7 @@ import styles from '../../styles/Terms.module.css';
 import useTranslation from 'next-translate/useTranslation';
 
 const Testimonials = () => {
-  const { t } = useTranslation('testimonials-page');
+  const { t } = useTranslation('testimonials');
 
   return (
     <div className={styles.terms}>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 
 const Services = () => {
-  const { t } = useTranslation('services-page');
+  const { t } = useTranslation('services');
 
   return (
     <div className={styles.terms}>

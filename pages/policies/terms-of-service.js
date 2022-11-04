@@ -3,7 +3,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 const TermOfService = () => {
-  const { t } = useTranslation('service-page');
+  const { t } = useTranslation('terms-of-service');
 
   return (
     <div className={styles.terms}>

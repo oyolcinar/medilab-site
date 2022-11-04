@@ -1,15 +1,18 @@
 import Head from 'next/head';
 import styles from '../../../styles/Terms.module.css';
 import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
 
 const HairTransplant = () => {
+  const { t } = useTranslation('hair-transplant');
+
   return (
     <div className={styles.terms}>
       <Head>
-        <title>Hair Transplant | Medilab Estetik</title>
+        <title>{t('head')} | Medilab Estetik</title>
       </Head>
       <div>
-        <h2>Hair Transplant</h2>
+        <h2>{t('header')}</h2>
       </div>
       <div className={styles.boxContainer}>
         <Link href='/services/hair-transplant/FUT-hair-transplant'>
