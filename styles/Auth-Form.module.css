@@ -120,3 +120,7 @@
 .auth a:hover {
   color: #2fbed7;
 }
+
+.billingContainer {
+  flex-direction: column;
+}

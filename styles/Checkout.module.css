@@ -1,0 +1,23 @@
+.flow {
+  width: 800px;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+}
+
+.flowSection {
+  flex: 1 1 0%;
+  border-bottom: 2px solid #12aac5;
+  text-align: center;
+}
+
+.flowActive {
+  border-bottom: #12aac5 2px solid;
+  color: #12aac5;
+}
+
+.flowNotActive {
+  border-bottom: #e6e6e6 2px solid;
+  color: #e6e6e6;
+}

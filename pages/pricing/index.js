@@ -3,7 +3,7 @@ import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 const Pricing = () => {
-  const { t } = useTranslation('pricing-page');
+  const { t } = useTranslation('pricing');
 
   return (
     <div className={styles.terms}>
