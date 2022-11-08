@@ -53,7 +53,7 @@ const Navbar = () => {
               <Link href='/about'>{t('about')}</Link>
               {!session && <Link href='/pricing'>{t('pricing')}</Link>}
               <Link href='/services'>
-                <a
+                <ins
                   onMouseEnter={() => {
                     setOpen(true);
                   }}
@@ -65,7 +65,7 @@ const Navbar = () => {
                   {t('services')}
                   <IoMdArrowDropdown className={styles.dropdown} />
                   {open && <DropdownMenu />}
-                </a>
+                </ins>
               </Link>
               <Link href='/blog'>{t('blog')}</Link>
               {session && (

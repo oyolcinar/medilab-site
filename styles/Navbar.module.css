@@ -24,15 +24,16 @@
   align-items: center;
 }
 
-.list > a{
+.list > a, .list > ins {
   margin: 0 25px 0 25px;
   padding-bottom: 40px;
   line-break: normal;
   transition: color 0.2s ease-in-out;
-
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.list > a:hover {
+.list > a:hover, .list > ins:hover{
   color: #12aac5;
 }
 

@@ -1,3 +1,15 @@
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}
+
 .dropdown {
   position: absolute !important;
   background-color: #fff;
@@ -13,6 +25,8 @@
   max-width: 1000px;
   display: flex;
   justify-content: space-around;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center
 }
 
 .header {
@@ -34,7 +48,7 @@
 }
 
 .item {
-  margin-top: 8px;
+  padding-top: 8px;
   list-style: none;
   color:black !important;
   transition: color 0.2s ease-in-out;
