@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { useContext, useEffect } from 'react';
 import { Store } from '../../utils/Store';
 import Cookies from 'js-cookie';
+import { useRouter } from 'next/router';
 
 const Billing = () => {
   const {
@@ -18,6 +19,7 @@ const Billing = () => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const { billingAddress } = cart;
+  const router = useRouter();
 
   useEffect(() => {
     setValue('firstName', billingAddress.firstName);
@@ -65,6 +67,7 @@ const Billing = () => {
         },
       }),
     );
+    router.push('/payment');
   }
 
   return (
@@ -103,7 +106,6 @@ const Billing = () => {
             </label>
             <input
               id='lastName'
-              autoFocus
               {...register('lastName', {
                 required: 'Please enter your last name.',
               })}
@@ -118,7 +120,6 @@ const Billing = () => {
             </label>
             <input
               id='country'
-              autoFocus
               {...register('country', {
                 required: 'Please enter your country.',
               })}
@@ -133,7 +134,6 @@ const Billing = () => {
             </label>
             <input
               id='city'
-              autoFocus
               {...register('city', {
                 required: 'Please enter your city.',
               })}
@@ -148,7 +148,6 @@ const Billing = () => {
             </label>
             <input
               id='address'
-              autoFocus
               {...register('address', {
                 required: 'Please enter your address.',
               })}
@@ -165,7 +164,6 @@ const Billing = () => {
             </label>
             <input
               id='postalCode'
-              autoFocus
               {...register('postalCode', {
                 required: 'Please enter your postal code.',
               })}
@@ -182,14 +180,13 @@ const Billing = () => {
             </label>
             <input
               id='phoneNumber'
-              autoFocus
               {...register('phoneNumber', {
                 required: 'Please enter your phone number.',
               })}
             />
           </div>
           <div className={styles.actions}>
-            <button>Save Billing Address</button>
+            <button>Next</button>
           </div>
         </form>
       </div>

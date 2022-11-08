@@ -123,4 +123,5 @@
 
 .billingContainer {
   flex-direction: column;
+  margin-top: 116px !important;
 }

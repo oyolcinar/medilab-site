@@ -5,9 +5,15 @@ import Link from 'next/link';
 import { AiOutlineClose, AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import ButtonLarge from '../UI/ButtonLarge';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 const Cart = () => {
   const { state, dispatch } = useContext(Store);
+  const router = useRouter();
+
+  function checkouthandler() {
+    router.push('/billing');
+  }
 
   const removeItemHandler = (item) => {
     dispatch({ type: 'CART_REMOVE_ITEM', payload: item });
@@ -97,7 +103,7 @@ const Cart = () => {
           </div>
           <div className={styles.checkOut}>
             <div>
-              <ButtonLarge name='Checkout' />
+              <ButtonLarge name='Checkout' onClick={checkouthandler} />
             </div>
           </div>
         </div>
