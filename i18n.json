@@ -10,6 +10,8 @@
     "/blog": ["blog"],
     "/cart": ["cart"],
     "/services": ["services"],
+    "/billing": ["billing"],
+    "/payment": ["payment"],
     "/policies/privacy-and-cookie-policy": ["privacy-and-cookie-policy"],
     "/policies/terms-of-service": ["terms-of-service"],
     "/policies/terms-and-conditions-and-services-agreement": [

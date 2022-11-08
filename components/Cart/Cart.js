@@ -7,7 +7,17 @@ import ButtonLarge from '../UI/ButtonLarge';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 
-const Cart = () => {
+const Cart = ({
+  header,
+  product,
+  quantity,
+  unitPrice,
+  totalPrice,
+  subtotal,
+  checkout,
+  empty,
+  continueService,
+}) => {
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
 
@@ -73,37 +83,37 @@ const Cart = () => {
     <div>
       {state.cart.cartItems.length < 1 ? (
         <div className={styles.empty}>
-          <p>Your cart is currently empty.</p>
+          <p>{empty}</p>
           <Link href='/services'>
-            <p className={styles.continue}>Continue to our services</p>
+            <p className={styles.continue}>{continueService}</p>
           </Link>
         </div>
       ) : (
         <div>
           <div className={styles.header}>
-            <div>Your Cart</div>
+            <div>{header}</div>
           </div>
           <table className={styles.table}>
             <thead className={styles.tableHeader}>
               <tr>
-                <th className={styles.infoCell}>Product</th>
-                <th className={styles.tableCell}>Quantity</th>
-                <th className={styles.priceCell}>Unit Price</th>
-                <th className={styles.totalCell}>Total</th>
+                <th className={styles.infoCell}>{product}</th>
+                <th className={styles.tableCell}>{quantity}</th>
+                <th className={styles.priceCell}>{unitPrice}</th>
+                <th className={styles.totalCell}>{totalPrice}</th>
                 <th></th>
               </tr>
             </thead>
             <tbody className={styles.cartItem}>{cartItemsArr}</tbody>
           </table>
           <div className={styles.subtotal}>
-            Subtotal ({state.cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-            ) :{' '}
+            {subtotal} (
+            {state.cart.cartItems.reduce((a, c) => a + c.quantity, 0)}) :{' '}
             {state.cart.cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}{' '}
             €
           </div>
           <div className={styles.checkOut}>
             <div>
-              <ButtonLarge name='Checkout' onClick={checkouthandler} />
+              <ButtonLarge name={checkout} onClick={checkouthandler} />
             </div>
           </div>
         </div>

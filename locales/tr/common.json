@@ -15,5 +15,8 @@
   "privacy" : "Gizlilik Politikası Ve Çerez Politikası",
   "service" : "Website Hizmet Şartları",
   "conditions" : "Şartlar, Koşullar Ve Hizmet Sözleşmesi",
-  "cart": "SEPET"
+  "cart": "SEPET",  
+  "billing": "Billing Address",
+  "payment": "Payment Method",
+  "order": "Place Order"
 }

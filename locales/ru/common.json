@@ -15,5 +15,8 @@
   "privacy" : "Политика конфиденциальности и политика использования файлов Куки",
   "service" : "Условия обслуживания веб-сайта",
   "conditions" : "Условия и соглашение об услугах",
-  "cart": "КОРЗИНА"
+  "cart": "КОРЗИНА",
+  "billing": "Billing Address",
+  "payment": "Payment Method",
+  "order": "Place Order"
 }

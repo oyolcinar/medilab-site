@@ -15,5 +15,8 @@
   "privacy" : "Privacy Policy And Cookie Policy",
   "service" : "Website Terms Of Service",
   "conditions" : "Terms Conditions And Services Agreement",
-  "cart" : "CART"
+  "cart" : "CART",
+  "billing": "Billing Address",
+  "payment": "Payment Method",
+  "order": "Place Order"
 }

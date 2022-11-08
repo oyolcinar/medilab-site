@@ -6,8 +6,11 @@ import { useContext, useEffect } from 'react';
 import { Store } from '../../utils/Store';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
 
 const Billing = () => {
+  const { t } = useTranslation('billing');
+
   const {
     handleSubmit,
     register,
@@ -75,12 +78,12 @@ const Billing = () => {
       <CheckoutWizard activeStep={0} />
       <div className={styles.auth}>
         <div className={styles.header}>
-          <h1>Billing Address</h1>
+          <h1>{t('header')}</h1>
         </div>
         <form onSubmit={handleSubmit(submitHandler)}>
           <div className={styles.control}>
             <label htmlFor='firstName'>
-              First name:{' '}
+              {t('firstName')}{' '}
               {errors.firstName && (
                 <span className={styles.warning}>
                   {errors.firstName.message}
@@ -91,13 +94,13 @@ const Billing = () => {
               id='firstName'
               autoFocus
               {...register('firstName', {
-                required: 'Please enter your first name.',
+                required: `${t('firstNameError')}`,
               })}
             />
           </div>
           <div className={styles.control}>
             <label>
-              Last name:{' '}
+              {t('lastName')}{' '}
               {errors.lastName && (
                 <span className={styles.warning}>
                   {errors.lastName.message}
@@ -107,13 +110,13 @@ const Billing = () => {
             <input
               id='lastName'
               {...register('lastName', {
-                required: 'Please enter your last name.',
+                required: `${t('lastNameError')}`,
               })}
             />
           </div>
           <div className={styles.control}>
             <label>
-              Country:{' '}
+              {t('country')}{' '}
               {errors.country && (
                 <span className={styles.warning}>{errors.country.message}</span>
               )}
@@ -121,13 +124,13 @@ const Billing = () => {
             <input
               id='country'
               {...register('country', {
-                required: 'Please enter your country.',
+                required: `${t('countryError')}`,
               })}
             />
           </div>
           <div className={styles.control}>
             <label>
-              City:{' '}
+              {t('city')}{' '}
               {errors.city && (
                 <span className={styles.warning}>{errors.city.message}</span>
               )}
@@ -135,13 +138,13 @@ const Billing = () => {
             <input
               id='city'
               {...register('city', {
-                required: 'Please enter your city.',
+                required: `${t('cityError')}`,
               })}
             />
           </div>
           <div className={styles.control}>
             <label>
-              Address:{' '}
+              {t('address')}{' '}
               {errors.address && (
                 <span className={styles.warning}>{errors.address.message}</span>
               )}
@@ -149,13 +152,13 @@ const Billing = () => {
             <input
               id='address'
               {...register('address', {
-                required: 'Please enter your address.',
+                required: `${t('addressError')}`,
               })}
             />
           </div>
           <div className={styles.control}>
             <label>
-              Postal code:{' '}
+              {t('postalCode')}{' '}
               {errors.postalCode && (
                 <span className={styles.warning}>
                   {errors.postalCode.message}
@@ -165,13 +168,13 @@ const Billing = () => {
             <input
               id='postalCode'
               {...register('postalCode', {
-                required: 'Please enter your postal code.',
+                required: `${t('postalCodeError')}`,
               })}
             />
           </div>
           <div className={styles.control}>
             <label>
-              Phone:{' '}
+              {t('phoneNumber')}{' '}
               {errors.phoneNumber && (
                 <span className={styles.warning}>
                   {errors.phoneNumber.message}
@@ -181,12 +184,12 @@ const Billing = () => {
             <input
               id='phoneNumber'
               {...register('phoneNumber', {
-                required: 'Please enter your phone number.',
+                required: `${t('phoneNumberError')}`,
               })}
             />
           </div>
           <div className={styles.actions}>
-            <button>Next</button>
+            <button>{t('next')}</button>
           </div>
         </form>
       </div>

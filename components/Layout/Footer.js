@@ -120,7 +120,9 @@ const Footer = () => {
         </p>
       </div>
       <Link href='https://wa.me/+905365245426'>
-        <IoLogoWhatsapp className={styles.whatsapp} />
+        <a target='_blank' rel='noopener noreferrer'>
+          <IoLogoWhatsapp className={styles.whatsapp} />
+        </a>
       </Link>
     </div>
   );

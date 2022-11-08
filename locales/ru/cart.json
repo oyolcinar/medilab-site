@@ -1,3 +1,12 @@
 {
-  "head": "Ваша корзина"
+  "head": "Ваша корзина",
+  "header": "Your Cart",
+  "product": "Product",
+  "quantity": "Quantity",
+  "unitPrice": "Unit Price",
+  "total": "Total",
+  "subtotal": "Subtotal",
+  "checkout": "Checkout",
+  "empty": "Your cart is currently empty.",
+  "continue": "Continue to our services"
 }

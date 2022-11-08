@@ -1,0 +1,19 @@
+{
+  "head": "Billing Address",
+  "header": "Billing Address",
+  "firstName": "First name:",
+  "firstNameError": "Please enter your first name.",
+  "lastName": "Last name:",
+  "lastNameError": "Please enter your last name.",
+  "country": "Country:",
+  "countryError": "Please enter your country.",
+  "city": "City:",
+  "cityError": "Please enter your city.",
+  "address": "Address:",
+  "addressError": "Please enter your address.",
+  "postalCode": "Postal code:",
+  "postalCodeError": "Please enter your postal code.",
+  "phoneNumber": "Phone:",
+  "phoneNumberError": "Please enter your phone number.",
+  "next": "Next"
+}

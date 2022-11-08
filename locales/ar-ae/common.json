@@ -15,5 +15,8 @@
   "privacy" : "سياسة الخصوصية وسياسة ملفات تعريف الارتباط",
   "service" : "شروط خدمة الموقع",
   "conditions" : "اتفاقية الشروط والخدمات",
-  "cart": "عربة التسوق"
+  "cart": "عربة التسوق",
+  "billing": "Billing Address",
+  "payment": "Payment Method",
+  "order": "Place Order"
 }

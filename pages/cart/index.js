@@ -12,7 +12,17 @@ const Cart = () => {
       <Head>
         <title>{t('head')} | Medilab Estetik</title>
       </Head>
-      <CartComponent />
+      <CartComponent
+        header={`${t('header')}`}
+        product={`${t('product')}`}
+        quantity={`${t('quantity')}`}
+        unitPrice={`${t('unitPrice')}`}
+        totalPrice={`${t('total')}`}
+        subtotal={`${t('subtotal')}`}
+        checkout={`${t('checkout')}`}
+        empty={`${t('empty')}`}
+        continueService={`${t('continue')}`}
+      />
     </div>
   );
 };

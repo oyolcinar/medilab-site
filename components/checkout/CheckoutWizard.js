@@ -1,9 +1,12 @@
 import styles from '../../styles/Checkout.module.css';
+import useTranslation from 'next-translate/useTranslation';
 
 const CheckoutWizard = ({ activeStep = 0 }) => {
+  const { t } = useTranslation('common');
+
   return (
     <div className={styles.flow}>
-      {['Billing Address', 'Payment Method', 'Place Order'].map(
+      {[`${t('billing')}`, `${t('payment')}`, `${t('order')}`].map(
         (step, index) => (
           <div
             key={step}

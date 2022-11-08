@@ -22,7 +22,20 @@ async function createUser(email, password) {
   return data;
 }
 
-function AuthForm() {
+function AuthForm({
+  login,
+  emailMode,
+  email,
+  signup,
+  password,
+  create,
+  newPassword,
+  notFound,
+  exists,
+  incorrect,
+  existing,
+  newAccount,
+}) {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const [isLogin, setIsLogin] = useState(true);
@@ -96,34 +109,32 @@ function AuthForm() {
       <section className={styles.auth}>
         <div className={styles.header}>
           <h1>
-            {isForgot ? 'Enter Your Mail' : isLogin ? 'Login' : 'Sign Up'}
+            {isForgot ? `${emailMode}` : isLogin ? `${login}` : `${signup}`}
           </h1>
         </div>
         <form onSubmit={submitHandler}>
           <div className={styles.control}>
             <label htmlFor='email'>
-              Email:
-              {isLogin && !isForgot && loginResError === 'User not found.' && (
+              {email}
+              {isLogin && !isForgot && loginResError === `${notFound}` && (
                 <span className={styles.warning}>{loginResError}</span>
               )}
-              {!isLogin &&
-                !isForgot &&
-                loginResError === 'User already exists.' && (
-                  <span className={styles.warning}>{loginResError}</span>
-                )}
+              {!isLogin && !isForgot && loginResError === `${exists}` && (
+                <span className={styles.warning}>{loginResError}</span>
+              )}
             </label>
             <input type='email' id='email' required ref={emailInputRef} />
           </div>
           {!isForgot && (
             <div className={styles.control}>
               <label htmlFor='password'>
-                Password:
+                {password}
                 {!isPasswordValid && !isForgot && (
                   <span className={styles.warning}>
                     The password must be at least 8 characters.
                   </span>
                 )}
-                {isLogin && loginResError === 'Incorrect password.' && (
+                {isLogin && loginResError === `${incorrect}` && (
                   <span className={styles.warning}>{loginResError}</span>
                 )}
               </label>
@@ -137,11 +148,7 @@ function AuthForm() {
           )}
           <div className={styles.actions}>
             <button>
-              {isForgot
-                ? 'Send New Password'
-                : isLogin
-                ? 'Login'
-                : 'Create Account'}
+              {isForgot ? `${newPassword}` : isLogin ? `${login}` : `${create}`}
             </button>
             {isLogin && !isForgot && (
               <button
@@ -166,7 +173,7 @@ function AuthForm() {
               className={styles.toggle}
               onClick={switchAuthModeHandler}
             >
-              {isLogin ? 'Create new account' : 'Login with existing account'}
+              {isLogin ? `${newAccount}` : `${existing}`}
             </button>
           </div>
         </form>
