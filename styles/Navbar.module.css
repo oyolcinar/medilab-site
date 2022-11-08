@@ -28,6 +28,7 @@
   margin: 0 25px 0 25px;
   padding-bottom: 40px;
   line-break: normal;
+  transition: color 0.2s ease-in-out;
 
 }
 
@@ -52,6 +53,7 @@
   color: #12aac5;
   font-size: 0.7rem;
   background-color: transparent;
+  transition: color 0.2s ease-in-out;
 }
 
 .langbox button:hover {

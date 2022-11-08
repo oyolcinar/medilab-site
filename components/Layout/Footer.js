@@ -1,6 +1,7 @@
 import styles from '../../styles/Footer.module.css';
 import Link from 'next/link';
 import {
+  IoLogoWhatsapp,
   IoMdMail,
   IoLogoTwitter,
   IoLogoInstagram,
@@ -118,6 +119,9 @@ const Footer = () => {
           </Link>
         </p>
       </div>
+      <Link href='https://wa.me/+905365245426'>
+        <IoLogoWhatsapp className={styles.whatsapp} />
+      </Link>
     </div>
   );
 };
