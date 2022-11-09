@@ -4,6 +4,7 @@ import ButtonLarge from '../UI/ButtonLarge';
 import { useState } from 'react';
 import DropdownMenu from '../UI/DropdownMenu';
 import { IoMdArrowDropdown } from 'react-icons/io';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -44,6 +45,10 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
+        <GiHamburgerMenu
+          className={styles.hamburger}
+          onClick={toggleDropdown}
+        />
         <div className={styles.container}>
           <Link href='/'>
             <a className={styles.logo}>Medilab Estetik</a>
