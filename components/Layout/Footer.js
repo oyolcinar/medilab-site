@@ -114,7 +114,7 @@ const Footer = () => {
               rel='noopener noreferrer'
               className={styles.lastLink}
             >
-              MedilabAssist
+              Medilab Assist
             </a>
           </Link>
         </p>
