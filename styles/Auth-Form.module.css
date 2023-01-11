@@ -68,6 +68,12 @@
   align-items: center;
 }
 
+.actionsTwoButton {
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .actions button {
   font-size: 0.9rem;
   cursor: pointer;
@@ -127,4 +133,20 @@
 .billingContainer {
   flex-direction: column;
   margin-top: 116px !important;
+}
+
+.paymentContainer {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 3px;
+}
+
+.paymentContainer label {
+  font-size: 0.8rem;
+}
+
+.paymentContainer input:checked {
+  color: #12aac5;
 }

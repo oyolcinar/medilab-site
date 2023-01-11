@@ -13,6 +13,16 @@ export default NextAuth({
   session: {
     strategy: 'jwt',
   },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user?._id) token._id = user._id;
+      return token;
+    },
+    async session({ session, token }) {
+      if (token?._id) session.user._id = token._id;
+      return session;
+    },
+  },
   providers: [
     CredentialsProvider({
       name: 'credentials',
@@ -41,7 +51,7 @@ export default NextAuth({
         }
 
         client.close();
-        return { email: user.email };
+        return { _id: user._id, email: user.email };
       },
     }),
     EmailProvider({

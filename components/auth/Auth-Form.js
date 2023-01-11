@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Auth-Form.module.css';
-import { redirect } from 'next/dist/server/api-utils';
+/* import { redirect } from 'next/dist/server/api-utils'; */
 
 async function createUser(email, password) {
   const response = await fetch('/api/auth/signup', {
@@ -97,7 +97,6 @@ function AuthForm({
     } else {
       try {
         const result = await createUser(enteredEmail, enteredPassword);
-        console.log(result);
       } catch (error) {
         setLoginResError(error.message);
       }

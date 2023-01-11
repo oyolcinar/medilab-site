@@ -31,12 +31,10 @@ const Cart = ({
 
   const incrementItemHandler = (item) => {
     dispatch({ type: 'CART_INCREMENT_ITEM', payload: item });
-    console.log(state.cart.cartItems);
   };
 
   const decrementItemHandler = (item) => {
     dispatch({ type: 'CART_DECREMENT_ITEM', payload: item });
-    console.log(state.cart.cartItems);
   };
 
   let total = 0;

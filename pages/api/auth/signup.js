@@ -39,6 +39,7 @@ async function handler(req, res) {
 
   res.status(201).json({ message: 'Created User.' });
   client.close();
+  return;
 }
 
 export default handler;
