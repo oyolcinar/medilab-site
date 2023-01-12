@@ -4,24 +4,6 @@ import { useRouter } from 'next/router';
 import styles from '../../styles/Auth-Form.module.css';
 /* import { redirect } from 'next/dist/server/api-utils'; */
 
-async function createUser(email, password) {
-  const response = await fetch('/api/auth/signup', {
-    method: 'POST',
-    body: JSON.stringify({ email, password }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.message || 'Something went wrong');
-  }
-  redirect();
-  return data;
-}
-
 function AuthForm({
   login,
   emailMode,
@@ -43,6 +25,29 @@ function AuthForm({
   const [isPasswordValid, setIsPasswordValid] = useState(true);
   const [loginResError, setLoginResError] = useState();
   const router = useRouter();
+
+  async function createUser(email, password) {
+    const response = await fetch('/api/auth/signup', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Something went wrong');
+    }
+    signIn('credentials', {
+      redirect: false,
+      email: email,
+      password: password,
+    });
+    redirect();
+    return data;
+  }
 
   function switchAuthModeHandler() {
     setIsLogin((prevState) => !prevState);

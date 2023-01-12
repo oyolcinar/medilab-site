@@ -1,4 +1,5 @@
 import styles from '../../styles/Auth-Form.module.css';
+import tableStyles from '../../styles/Cart.module.css';
 import CheckoutWizard from '../../components/checkout/CheckoutWizard';
 import Link from 'next/link';
 import { useContext, useEffect, useState } from 'react';
@@ -96,20 +97,20 @@ const PlaceOrderScreen = () => {
               </div>
               <div>
                 <h4>Purchased Services</h4>
-                <table className={styles.table}>
-                  <thead className={styles.tableHeader}>
+                <table className={tableStyles.table}>
+                  <thead className={tableStyles.tableHeader}>
                     <tr>
-                      <th className={styles.infoCell}>Product</th>
-                      <th className={styles.tableCell}>Quantity</th>
-                      <th className={styles.priceCell}>Unit Price</th>
-                      <th className={styles.totalCell}>Total</th>
+                      <th className={tableStyles.infoCell}>Product</th>
+                      <th className={tableStyles.tableCell}>Quantity</th>
+                      <th className={tableStyles.priceCell}>Unit Price</th>
+                      <th className={tableStyles.totalCell}>Total</th>
                       <th></th>
                     </tr>
                   </thead>
-                  <tbody className={styles.cartItem}>
+                  <tbody className={tableStyles.cartItem}>
                     {cartItems.map((item) => (
                       <tr key={item.id}>
-                        <td className={styles.infoCell}>
+                        <td className={tableStyles.infoCell}>
                           <Link href={item.query}>
                             <a>
                               {/*             <Image alt={item.name} width={50} height={50}></Image> */}
@@ -118,9 +119,13 @@ const PlaceOrderScreen = () => {
                             </a>
                           </Link>
                         </td>
-                        <td className={styles.tableCell}>{item.quantity}</td>
-                        <td className={styles.priceCell}>{item.price} €</td>
-                        <td className={styles.totalCell}>
+                        <td className={tableStyles.tableCell}>
+                          {item.quantity}
+                        </td>
+                        <td className={tableStyles.priceCell}>
+                          {item.price} €
+                        </td>
+                        <td className={tableStyles.totalCell}>
                           {item.price * item.quantity} €
                         </td>
                       </tr>
