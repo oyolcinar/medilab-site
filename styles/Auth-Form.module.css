@@ -150,3 +150,77 @@
 .paymentContainer input:checked {
   color: #12aac5;
 }
+
+.card {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card h4 {
+  color: #12aac5;
+  font-size: 0.85rem;
+}
+
+.cardInfo {
+  font-size: 0.8rem;
+}
+
+.seperator {
+  height: 2px;
+  background-color: #12aac5;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card ul > li {
+  list-style: none;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-left: 0;
+}
+
+.orderCell {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.pbutton {
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: white;
+  background-color: #12aac5;
+  border: 1px solid #2fbed7;
+  border-radius: 5px;
+  padding: 0.5rem 2.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.pbutton:hover {
+  background-color: #2fbed7;
+  border-color: 1px solid white;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cartEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartText {
+  font-size: 0.8rem;
+}
+
+.paymentText {
+  display: flex;
+  justify-content: space-between;
+}

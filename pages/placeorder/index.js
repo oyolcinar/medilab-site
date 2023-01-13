@@ -72,14 +72,15 @@ const PlaceOrderScreen = () => {
         </div>
         <div>
           {cartItems.length === 0 ? (
-            <div>
-              Cart is empty. <Link href='/services'>Continue shopping.</Link>
+            <div className={styles.cartEmpty}>
+              <div className={styles.cartText}>Cart is empty. </div>{' '}
+              <Link href='/services'>Continue shopping.</Link>
             </div>
           ) : (
             <div>
-              <div>
-                <h4>Billing Address</h4>
-                <div>
+              <div className={styles.card}>
+                <h4>Billing Address:</h4>
+                <div className={styles.cardInfo}>
                   {billingAddress.firstName} {billingAddress.lastName},{' '}
                   {billingAddress.address}, {billingAddress.city},{' '}
                   {billingAddress.postalCode}, {billingAddress.country}
@@ -88,15 +89,17 @@ const PlaceOrderScreen = () => {
                   <Link href='/billing'>Edit</Link>
                 </div>
               </div>
-              <div>
-                <h4>Payment Method</h4>
-                <div>{paymentMethod}</div>
+              <div className={styles.seperator}></div>
+              <div className={styles.card}>
+                <h4>Payment Method:</h4>
+                <div className={styles.cardInfo}>{paymentMethod}</div>
                 <div>
                   <Link href='/payment'>Edit</Link>
                 </div>
               </div>
-              <div>
-                <h4>Purchased Services</h4>
+              <div className={styles.seperator}></div>
+              <div className={styles.card}>
+                <h4>Purchased Services:</h4>
                 <table className={tableStyles.table}>
                   <thead className={tableStyles.tableHeader}>
                     <tr>
@@ -136,33 +139,39 @@ const PlaceOrderScreen = () => {
                   <Link href='/cart'>Edit</Link>
                 </div>
               </div>
-              <div>
-                <h4>Order Summary</h4>
+              <div className={styles.seperator}></div>
+              <div className={styles.card}>
+                <h4>Order Summary:</h4>
                 <ul>
                   <li>
-                    <div>
-                      <div>Items</div>
-                      <div>{itemsPrice}</div>
+                    <div className={styles.orderCell}>
+                      <div>Items:</div>
+                      <div className={styles.orderInfo}>{itemsPrice} €</div>
                     </div>
                   </li>
                   <li>
-                    <div>
-                      <div>Tax</div>
-                      <div>{taxPrice}</div>
+                    <div className={styles.orderCell}>
+                      <div>Tax:</div>
+                      <div className={styles.orderInfo}>{taxPrice} €</div>
                     </div>
                   </li>
                   <li>
-                    <div>
-                      <div>Total</div>
-                      <div>{totalPrice}</div>
+                    <div className={styles.orderCell}>
+                      <div>Total:</div>
+                      <div className={styles.orderInfo}>{totalPrice} €</div>
                     </div>
-                  </li>
-                  <li>
-                    <button disabled={loading} onClick={placeOrderHandler}>
-                      {loading ? 'Loading...' : 'Place Order'}
-                    </button>
                   </li>
                 </ul>
+              </div>
+              <div className={styles.seperator}></div>
+              <div className={styles.buttonContainer}>
+                <button
+                  disabled={loading}
+                  onClick={placeOrderHandler}
+                  className={styles.pbutton}
+                >
+                  {loading ? 'Loading...' : 'Place Order'}
+                </button>
               </div>
             </div>
           )}

@@ -59,7 +59,7 @@ const OrderScreen = () => {
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
       <div className={styles.auth}>
-        <div>
+        <div className={styles.header}>
           <h1>Order: {orderId}</h1>
         </div>
         {loading ? (
@@ -68,24 +68,39 @@ const OrderScreen = () => {
           <div>{error}</div>
         ) : (
           <div>
-            <div>
-              <h4>Billing Address</h4>
-              {billingAddress.firstName}, {billingAddress.lastName},{' '}
-              {billingAddress.city}, {billingAddress.postalCode},{' '}
-              {billingAddress.country}
+            <div className={styles.card}>
+              <h4>Billing Address:</h4>
+              <div className={styles.cardInfo}>
+                {billingAddress.firstName}, {billingAddress.lastName},{' '}
+                {billingAddress.city}, {billingAddress.postalCode},{' '}
+                {billingAddress.country}
+              </div>
             </div>
-            {isDelivered ? (
-              <div>Delivered at {deliveredAt}</div>
-            ) : (
-              <div>Not delivered.</div>
-            )}
-            <div>
-              <h4>Payment Method</h4>
-              <div>{paymentMethod}</div>
+            <div className={styles.seperator}></div>
+            {/*             <div className={styles.card}>
+              {isDelivered ? (
+                <div className={styles.cardInfo}>
+                  Delivered at: {deliveredAt}
+                </div>
+              ) : (
+                <div className={styles.cardInfo}>Not delivered.</div>
+              )}
+            </div> */}
+            <div className={styles.card}>
+              <h4>Payment Method:</h4>
+              <div className={styles.paymentText}>
+                <div className={styles.cardInfo}>{paymentMethod}</div>
+                {isPaid ? (
+                  <div className={styles.cardInfo}>Paid at: {paidAt}</div>
+                ) : (
+                  <div className={styles.cardInfo}>Not paid</div>
+                )}
+              </div>
             </div>
-            {isPaid ? <div>Paid at {paidAt}</div> : <div>Not paid</div>}
-            <div>
-              <h4>Order Items</h4>
+
+            <div className={styles.seperator}></div>
+            <div className={styles.card}>
+              <h4>Order Items:</h4>
               <table className={tableStyles.table}>
                 <thead className={tableStyles.tableHeader}>
                   <tr>
@@ -118,25 +133,26 @@ const OrderScreen = () => {
                 </tbody>
               </table>
             </div>
-            <div>
-              <h4>Order Summary</h4>
+            <div className={styles.seperator}></div>
+            <div className={styles.card}>
+              <h4>Order Summary:</h4>
               <ul>
                 <li>
-                  <div>
-                    <div>Items</div>
-                    <div>{itemsPrice}</div>
+                  <div className={styles.orderCell}>
+                    <div>Items:</div>
+                    <div>{itemsPrice} €</div>
                   </div>
                 </li>
                 <li>
-                  <div>
-                    <div>Tax</div>
-                    <div>{taxPrice}</div>
+                  <div className={styles.orderCell}>
+                    <div>Tax:</div>
+                    <div>{taxPrice} €</div>
                   </div>
                 </li>
                 <li>
-                  <div>
-                    <div>Total</div>
-                    <div>{totalPrice}</div>
+                  <div className={styles.orderCell}>
+                    <div>Total:</div>
+                    <div>{totalPrice} €</div>
                   </div>
                 </li>
               </ul>
