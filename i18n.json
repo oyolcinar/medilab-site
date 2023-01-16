@@ -11,7 +11,9 @@
     "/cart": ["cart"],
     "/services": ["services"],
     "/billing": ["billing"],
+    "/accommodation": ["accommodation"],
     "/payment": ["payment"],
+    "/placeorder": ["placeorder"],
     "/policies/privacy-and-cookie-policy": ["privacy-and-cookie-policy"],
     "/policies/terms-of-service": ["terms-of-service"],
     "/policies/terms-and-conditions-and-services-agreement": [

@@ -71,11 +71,12 @@ const Billing = () => {
       }),
     );
     router.push('/payment');
+    console.log(state);
   }
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
-      <CheckoutWizard activeStep={0} />
+      <CheckoutWizard activeStep={1} />
       <div className={styles.auth}>
         <div className={styles.header}>
           <h1>{t('header')}</h1>
@@ -188,7 +189,10 @@ const Billing = () => {
               })}
             />
           </div>
-          <div className={styles.actions}>
+          <div className={`${styles.actions} ${styles.actionsTwoButton}`}>
+            <button onClick={() => router.push('/accommodation')} type='button'>
+              Back
+            </button>
             <button>{t('next')}</button>
           </div>
         </form>

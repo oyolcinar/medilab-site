@@ -6,7 +6,12 @@ export const Store = createContext();
 const initialState = {
   cart: Cookies.get('cart')
     ? JSON.parse(Cookies.get('cart'))
-    : { cartItems: [], billingAddress: {}, paymentMethod: '' },
+    : {
+        cartItems: [],
+        billingAddress: {},
+        accommodation: {},
+        paymentMethod: '',
+      },
 };
 
 function reducer(state, action) {
@@ -95,6 +100,18 @@ function reducer(state, action) {
 
     case 'CART_CLEAR_ITEMS':
       return { ...state, cart: { ...state.cart, cartItems: [] } };
+
+    case 'SAVE_ACCOMMODATION':
+      return {
+        ...state,
+        cart: {
+          ...state.cart,
+          accommodation: {
+            ...state.cart.accommodation,
+            ...action.payload,
+          },
+        },
+      };
 
     default:
       return state;

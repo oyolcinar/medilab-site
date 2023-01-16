@@ -16,6 +16,7 @@
   "service" : "شروط خدمة الموقع",
   "conditions" : "اتفاقية الشروط والخدمات",
   "cart": "عربة التسوق",
+  "accommodation": "Accommodation",
   "billing": "Billing Address",
   "payment": "Payment Method",
   "order": "Place Order"

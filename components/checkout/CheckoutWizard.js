@@ -6,18 +6,21 @@ const CheckoutWizard = ({ activeStep = 0 }) => {
 
   return (
     <div className={styles.flow}>
-      {[`${t('billing')}`, `${t('payment')}`, `${t('order')}`].map(
-        (step, index) => (
-          <div
-            key={step}
-            className={`${styles.flowSection} ${
-              index <= activeStep ? styles.flowActive : styles.flowNotActive
-            }`}
-          >
-            {step}
-          </div>
-        ),
-      )}
+      {[
+        `${t('accommodation')}`,
+        `${t('billing')}`,
+        `${t('payment')}`,
+        `${t('order')}`,
+      ].map((step, index) => (
+        <div
+          key={step}
+          className={`${styles.flowSection} ${
+            index <= activeStep ? styles.flowActive : styles.flowNotActive
+          }`}
+        >
+          {step}
+        </div>
+      ))}
     </div>
   );
 };

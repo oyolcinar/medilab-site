@@ -16,6 +16,7 @@
   "service" : "Условия обслуживания веб-сайта",
   "conditions" : "Условия и соглашение об услугах",
   "cart": "КОРЗИНА",
+  "accommodation": "Accommodation",
   "billing": "Billing Address",
   "payment": "Payment Method",
   "order": "Place Order"

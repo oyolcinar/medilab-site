@@ -16,6 +16,7 @@
   "service" : "Website Terms Of Service",
   "conditions" : "Terms Conditions And Services Agreement",
   "cart" : "CART",
+  "accommodation": "Accommodation",
   "billing": "Billing Address",
   "payment": "Payment Method",
   "order": "Place Order"

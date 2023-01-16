@@ -22,7 +22,7 @@ const Cart = ({
   const router = useRouter();
 
   function checkouthandler() {
-    router.push('/billing');
+    router.push('/accommodation');
   }
 
   const removeItemHandler = (item) => {

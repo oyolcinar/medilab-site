@@ -46,6 +46,7 @@ const OrderScreen = () => {
   const {
     billingAddress,
     paymentMethod,
+    accommodation,
     orderItems,
     itemsPrice,
     taxPrice,

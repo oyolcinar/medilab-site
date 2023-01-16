@@ -96,11 +96,11 @@ const Footer = () => {
         <Link href='/policies/privacy-and-cookie-policy'>
           <a>{t('privacy')}</a>
         </Link>
-        <div>|</div>
+        <div className={styles.verticalSeperator}>|</div>
         <Link href='/policies/terms-of-service'>
           <a>{t('service')}</a>
         </Link>
-        <div>|</div>
+        <div className={styles.verticalSeperator}>|</div>
         <Link href='/policies/terms-and-conditions-and-services-agreement'>
           <a>{t('conditions')}</a>
         </Link>

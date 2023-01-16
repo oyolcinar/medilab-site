@@ -49,6 +49,7 @@ const Navbar = () => {
           className={styles.hamburger}
           onClick={toggleDropdown}
         />
+        {open && <DropdownMenu />}
         <div className={styles.container}>
           <Link href='/'>
             <a className={styles.logo}>Medilab Estetik</a>

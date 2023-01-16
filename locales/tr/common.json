@@ -16,6 +16,7 @@
   "service" : "Website Hizmet Şartları",
   "conditions" : "Şartlar, Koşullar Ve Hizmet Sözleşmesi",
   "cart": "SEPET",  
+  "accommodation": "Accommodation",
   "billing": "Billing Address",
   "payment": "Payment Method",
   "order": "Place Order"

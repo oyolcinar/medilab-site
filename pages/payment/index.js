@@ -41,7 +41,7 @@ const Payment = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
-      <CheckoutWizard activeStep={1} />
+      <CheckoutWizard activeStep={2} />
       <div className={styles.auth}>
         <div className={styles.header}>
           <h1>Payment Method</h1>

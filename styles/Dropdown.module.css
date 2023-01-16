@@ -57,3 +57,7 @@
 .item:hover {
  color: #12aac5 !important;
 }
+
+@media screen and (max-width: 800px) {
+  
+}

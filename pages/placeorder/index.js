@@ -14,7 +14,7 @@ import { getSession } from 'next-auth/react';
 const PlaceOrderScreen = () => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
-  const { cartItems, billingAddress, paymentMethod } = cart;
+  const { cartItems, billingAddress, paymentMethod, accommodation } = cart;
 
   const round2 = (num) => Math.round(num * 100 + Number.EPSILON) / 100;
 
@@ -42,6 +42,7 @@ const PlaceOrderScreen = () => {
       const { data } = await axios.post('/api/orders', {
         orderItems: cartItems,
         billingAddress,
+        accommodation,
         paymentMethod,
         itemsPrice,
         taxPrice,
@@ -65,7 +66,7 @@ const PlaceOrderScreen = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
-      <CheckoutWizard activeStep={2} />
+      <CheckoutWizard activeStep={3} />
       <div className={styles.auth}>
         <div className={styles.header}>
           <h1>Place Order</h1>

@@ -66,6 +66,8 @@
   font-size: 1.2rem;
   color: #12aac5;
   transition: color 0.2s ease-in-out;
+  height: 78px;
+  
 }
 
 .hamburger:hover{

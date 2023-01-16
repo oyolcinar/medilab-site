@@ -1,0 +1,23 @@
+{
+  "head": "Accommodation",
+  "header": "Accommodation",
+  "firstName": "First name:",
+  "firstNameError": "Please enter your first name.",
+  "lastName": "Last name:",
+  "lastNameError": "Please enter your last name.",
+  "country": "Country:",
+  "countryError": "Please enter your country.",
+  "phoneNumber": "Phone:",
+  "phoneNumberError": "Please enter your phone number.",
+  "stayStart": "Check in:",
+  "stayStartError": "Please select a check in date.",
+  "stayEnd": "Check out:",
+  "stayEndError": "Please select a check in date.",
+  "hotel": "Select Hotel:",
+  "hotelError": "Please select an hotel.",
+  "guestNo": "Select number of guests:",
+  "guestNoError": "Please select number of guests.",
+  "roomNo": "Select number of rooms:",
+  "roomNoError": "Please select number of rooms.",
+  "next": "Next"
+}
