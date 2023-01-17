@@ -2,7 +2,7 @@ import CheckoutWizard from '../../components/checkout/CheckoutWizard';
 import { getSession } from 'next-auth/react';
 import styles from '../../styles/Auth-Form.module.css';
 import { useContext, useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { Store } from '../../utils/Store';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
@@ -12,10 +12,8 @@ import DatePicker from 'react-datepicker';
 const Accommodation = () => {
   const { t } = useTranslation('accommodation');
 
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-
   const {
+    control,
     handleSubmit,
     register,
     formState: { errors },
@@ -34,6 +32,8 @@ const Accommodation = () => {
     setValue('phoneNumber', accommodation.phoneNumber);
     setValue('country', accommodation.country);
     setValue('hotel', accommodation.hotel);
+    setValue('stayStart', accommodation.stayStart);
+    setValue('stayEnd', accommodation.stayEnd);
     setValue('guestNo', accommodation.guestNo);
     setValue('roomNo', accommodation.roomNo);
   }, [setValue, accommodation]);
@@ -43,8 +43,8 @@ const Accommodation = () => {
     lastName,
     phoneNumber,
     country,
-    startDate,
-    endDate,
+    stayStart,
+    stayEnd,
     hotel,
     guestNo,
     roomNo,
@@ -56,8 +56,8 @@ const Accommodation = () => {
         lastName,
         phoneNumber,
         country,
-        stayStart: startDate,
-        stayEnd: endDate,
+        stayStart,
+        stayEnd,
         hotel,
         guestNo,
         roomNo,
@@ -72,8 +72,8 @@ const Accommodation = () => {
           lastName,
           phoneNumber,
           country,
-          stayStart: startDate,
-          stayEnd: endDate,
+          stayStart,
+          stayEnd,
           hotel,
           guestNo,
           roomNo,
@@ -176,16 +176,24 @@ const Accommodation = () => {
           </div>
           <div className={styles.control}>
             <label>{t('stayStart')}</label>
-            <DatePicker
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
+            <Controller
+              control={control}
+              name={'stayStart'}
+              defaultValue={new Date()}
+              render={({ field: { value, onChange } }) => (
+                <DatePicker onChange={onChange} selected={value} />
+              )}
             />
           </div>
           <div className={styles.control}>
             <label>{t('stayEnd')}</label>
-            <DatePicker
-              selected={endDate}
-              onChange={(date) => setEndDate(date)}
+            <Controller
+              control={control}
+              name={'stayEnd'}
+              defaultValue={new Date()}
+              render={({ field: { onChange, value } }) => (
+                <DatePicker onChange={onChange} selected={value} />
+              )}
             />
           </div>
           <div className={styles.control}>
