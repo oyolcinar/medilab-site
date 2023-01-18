@@ -1,7 +1,7 @@
 import CheckoutWizard from '../../components/checkout/CheckoutWizard';
 import { getSession } from 'next-auth/react';
 import styles from '../../styles/Auth-Form.module.css';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Store } from '../../utils/Store';
 import Cookies from 'js-cookie';
@@ -181,7 +181,11 @@ const Accommodation = () => {
               name={'stayStart'}
               defaultValue={new Date()}
               render={({ field: { value, onChange } }) => (
-                <DatePicker onChange={onChange} selected={value} />
+                <DatePicker
+                  dateFormat='dd-MM-yyyy'
+                  onChange={onChange}
+                  selected={value}
+                />
               )}
             />
           </div>
@@ -191,8 +195,12 @@ const Accommodation = () => {
               control={control}
               name={'stayEnd'}
               defaultValue={new Date()}
-              render={({ field: { onChange, value } }) => (
-                <DatePicker onChange={onChange} selected={value} />
+              render={({ field: { value, onChange } }) => (
+                <DatePicker
+                  dateFormat='dd-MM-yyyy'
+                  onChange={onChange}
+                  selected={value}
+                />
               )}
             />
           </div>

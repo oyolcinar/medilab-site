@@ -3,6 +3,7 @@ import Layout from '../components/Layout/Layout';
 import Head from 'next/head';
 import { SessionProvider } from 'next-auth/react';
 import { StoreProvider } from '../utils/Store';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -24,7 +25,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
               content='initial-scale=1.0, width=device-width'
             />
           </Head>
-          <Component {...pageProps} />
+          <PayPalScriptProvider deferLoading={true}>
+            <Component {...pageProps} />
+          </PayPalScriptProvider>
         </Layout>
       </StoreProvider>
     </SessionProvider>

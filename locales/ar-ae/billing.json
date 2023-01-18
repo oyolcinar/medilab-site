@@ -15,5 +15,6 @@
   "postalCodeError": "Please enter your postal code.",
   "phoneNumber": "Phone:",
   "phoneNumberError": "Please enter your phone number.",
-  "next": "Next"
+  "next": "Next",
+  "back": "Back"
 }

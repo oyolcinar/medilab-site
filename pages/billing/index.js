@@ -191,7 +191,7 @@ const Billing = () => {
           </div>
           <div className={`${styles.actions} ${styles.actionsTwoButton}`}>
             <button onClick={() => router.push('/accommodation')} type='button'>
-              Back
+              {t('back')}
             </button>
             <button>{t('next')}</button>
           </div>
