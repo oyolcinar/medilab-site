@@ -32,8 +32,8 @@ const Accommodation = () => {
     setValue('phoneNumber', accommodation.phoneNumber);
     setValue('country', accommodation.country);
     setValue('hotel', accommodation.hotel);
-    setValue('stayStart', accommodation.stayStart);
-    setValue('stayEnd', accommodation.stayEnd);
+    setValue('stayStart', new Date(accommodation.stayStart));
+    setValue('stayEnd', new Date(accommodation.stayEnd));
     setValue('guestNo', accommodation.guestNo);
     setValue('roomNo', accommodation.roomNo);
   }, [setValue, accommodation]);
@@ -82,6 +82,8 @@ const Accommodation = () => {
     );
     router.push('/billing');
   }
+
+  console.log(state);
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
@@ -178,7 +180,7 @@ const Accommodation = () => {
             <label>{t('stayStart')}</label>
             <Controller
               control={control}
-              name={'stayStart'}
+              name='stayStart'
               defaultValue={new Date()}
               render={({ field: { value, onChange } }) => (
                 <DatePicker
@@ -193,7 +195,7 @@ const Accommodation = () => {
             <label>{t('stayEnd')}</label>
             <Controller
               control={control}
-              name={'stayEnd'}
+              name='stayEnd'
               defaultValue={new Date()}
               render={({ field: { value, onChange } }) => (
                 <DatePicker
