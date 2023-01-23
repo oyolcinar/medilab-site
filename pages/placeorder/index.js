@@ -22,7 +22,7 @@ const PlaceOrderScreen = () => {
     cartItems.reduce((a, c) => a + c.quantity * c.price, 0),
   );
 
-  const taxPrice = round2(itemsPrice * 0.15);
+  const taxPrice = round2(itemsPrice * 0.2);
 
   const totalPrice = round2(itemsPrice + taxPrice);
 

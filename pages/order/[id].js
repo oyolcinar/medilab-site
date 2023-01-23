@@ -8,12 +8,37 @@ import { getError } from '../../utils/error';
 import Link from 'next/link';
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import { toast } from 'react-toastify';
+import { loadStripe } from '@stripe/stripe-js';
+
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
+);
 
 const OrderScreen = () => {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
   const { query } = useRouter();
   const orderId = query.id;
+
+  const handleCheckout = async () => {
+    try {
+      const stripe = await stripePromise;
+
+      const checkoutSession = await axios.post('/api/checkout-session', {
+        order,
+      });
+
+      const result = await stripe.redirectToCheckout({
+        sessionId: checkoutSession.data.id,
+      });
+
+      if (result.error) {
+        alert(result.error.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   function reducer(state, action) {
     switch (action.type) {
@@ -238,6 +263,7 @@ const OrderScreen = () => {
                     {loadingPay && <div>Loading...</div>}
                   </li>
                 )}
+                <button onClick={handleCheckout}>Checkout</button>
               </ul>
             </div>
           </div>

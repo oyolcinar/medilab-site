@@ -32,8 +32,8 @@ const Accommodation = () => {
     setValue('phoneNumber', accommodation.phoneNumber);
     setValue('country', accommodation.country);
     setValue('hotel', accommodation.hotel);
-    setValue('stayStart', new Date(accommodation.stayStart));
-    setValue('stayEnd', new Date(accommodation.stayEnd));
+    /*     setValue('stayStart', new Date(accommodation.stayStart));
+    setValue('stayEnd', new Date(accommodation.stayEnd)); */
     setValue('guestNo', accommodation.guestNo);
     setValue('roomNo', accommodation.roomNo);
   }, [setValue, accommodation]);
