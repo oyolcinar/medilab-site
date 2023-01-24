@@ -3,6 +3,8 @@ import { getError } from '../../utils/error';
 import axios from 'axios';
 import Link from 'next/link';
 import { getSession } from 'next-auth/react';
+import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 import tableStyles from '../../styles/Cart.module.css';
 import styles from '../../styles/Auth-Form.module.css';
@@ -21,6 +23,7 @@ function reducer(state, action) {
 }
 
 const OrderHistoryScreen = () => {
+  const { t } = useTranslation('order-history');
   const [{ loading, error, orders }, dispatch] = useReducer(reducer, {
     loading: true,
     orders: [],
@@ -42,6 +45,9 @@ const OrderHistoryScreen = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
+      <Head>
+        <title>{t('head')} | Medilab Estetik</title>
+      </Head>
       <div className={styles.auth}>
         <div className={styles.header}>
           <h1>Order History</h1>

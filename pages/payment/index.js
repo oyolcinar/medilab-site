@@ -6,8 +6,11 @@ import { useContext, useEffect, useState } from 'react';
 import { Store } from '../../utils/Store';
 import Cookies from 'js-cookie';
 import { toast } from 'react-toastify';
+import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
 
 const Payment = () => {
+  const { t } = useTranslation('payment');
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
 
   const { state, dispatch } = useContext(Store);
@@ -41,6 +44,9 @@ const Payment = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
+      <Head>
+        <title>{t('head')} | Medilab Estetik</title>
+      </Head>
       <CheckoutWizard activeStep={2} />
       <div className={styles.auth}>
         <div className={styles.header}>

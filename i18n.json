@@ -14,6 +14,8 @@
     "/accommodation": ["accommodation"],
     "/payment": ["payment"],
     "/placeorder": ["placeorder"],
+    "/order/[id]": ["order"],
+    "/order-history": ["order-history"],
     "/policies/privacy-and-cookie-policy": ["privacy-and-cookie-policy"],
     "/policies/terms-of-service": ["terms-of-service"],
     "/policies/terms-and-conditions-and-services-agreement": [

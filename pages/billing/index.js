@@ -7,6 +7,7 @@ import { Store } from '../../utils/Store';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
 
 const Billing = () => {
   const { t } = useTranslation('billing');
@@ -76,6 +77,9 @@ const Billing = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
+      <Head>
+        <title>{t('head')} | Medilab Estetik</title>
+      </Head>
       <CheckoutWizard activeStep={1} />
       <div className={styles.auth}>
         <div className={styles.header}>

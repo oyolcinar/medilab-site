@@ -8,6 +8,7 @@ import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import DatePicker from 'react-datepicker';
+import Head from 'next/head';
 
 const Accommodation = () => {
   const { t } = useTranslation('accommodation');
@@ -87,6 +88,9 @@ const Accommodation = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
+      <Head>
+        <title>{t('head')} | Medilab Estetik</title>
+      </Head>
       <CheckoutWizard activeStep={0} />
       <div className={styles.auth}>
         <div className={styles.header}>

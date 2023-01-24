@@ -9,12 +9,15 @@ import Link from 'next/link';
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import { toast } from 'react-toastify';
 import { loadStripe } from '@stripe/stripe-js';
+import Head from 'next/head';
+import useTranslation from 'next-translate/useTranslation';
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
 );
 
 const OrderScreen = () => {
+  const { t } = useTranslation('order');
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
 
   const { query } = useRouter();
@@ -150,9 +153,16 @@ const OrderScreen = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
+      <Head>
+        <title>
+          {t('head')} {orderId}| Medilab Estetik
+        </title>
+      </Head>
       <div className={styles.auth}>
         <div className={styles.header}>
-          <h1>Order: {orderId}</h1>
+          <h1>
+            {t('header')} {orderId}
+          </h1>
         </div>
         {loading ? (
           <div>Loading...</div>

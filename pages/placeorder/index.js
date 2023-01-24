@@ -10,8 +10,11 @@ import { getError } from '../../utils/error';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { getSession } from 'next-auth/react';
+import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
 
 const PlaceOrderScreen = () => {
+  const { t } = useTranslation('placeorder');
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const { cartItems, billingAddress, paymentMethod, accommodation } = cart;
@@ -66,6 +69,9 @@ const PlaceOrderScreen = () => {
 
   return (
     <div className={`${styles.container} ${styles.billingContainer}`}>
+      <Head>
+        <title>{t('head')} | Medilab Estetik</title>
+      </Head>
       <CheckoutWizard activeStep={3} />
       <div className={styles.auth}>
         <div className={styles.header}>
