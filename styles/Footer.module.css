@@ -84,9 +84,9 @@
   color: #2fbed7;
 }
 
-@media screen and (max-width: 1014px) {
+@media screen and (max-width: 1100px) {
   .container {
-    column-gap: 120px;
+    column-gap: 152px;
     flex-wrap: wrap;
     flex: 2;
     flex-grow: 1;
