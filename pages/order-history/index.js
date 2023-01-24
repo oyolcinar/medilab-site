@@ -4,6 +4,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import { getSession } from 'next-auth/react';
 
+import tableStyles from '../../styles/Cart.module.css';
 import styles from '../../styles/Auth-Form.module.css';
 
 function reducer(state, action) {
@@ -51,34 +52,40 @@ const OrderHistoryScreen = () => {
           <div>{error}</div>
         ) : (
           <div>
-            <table>
-              <thead>
+            <table className={tableStyles.table}>
+              <thead className={tableStyles.tableHeader}>
                 <tr>
-                  <th>ID</th>
-                  <th>DATE</th>
-                  <th>TOTAL</th>
-                  <th>PAID</th>
-                  <th>ACTION</th>
+                  <th className={tableStyles.infoCell}>ID</th>
+                  <th className={tableStyles.tableCell}>DATE</th>
+                  <th className={tableStyles.priceCell}>TOTAL</th>
+                  <th className={tableStyles.priceCell}>PAID</th>
+                  <th className={tableStyles.priceCell}>ACTION</th>
                 </tr>
               </thead>
-              <tbody>
-                {orders.map((order) => {
+              <tbody className={tableStyles.cartItem}>
+                {orders.map((order) => (
                   <tr key={order._id}>
-                    <td>{order._id.substring(20, 24)}</td>
-                    <td>{order.createdAt.substring(0, 10)}</td>
-                    <td>{order.totalPrice}</td>
-                    <td>
+                    <td className={tableStyles.infoCell}>
+                      {order._id.substring(20, 24)}
+                    </td>
+                    <td className={tableStyles.tableCell}>
+                      {order.createdAt.substring(0, 10)}
+                    </td>
+                    <td className={tableStyles.priceCell}>
+                      {order.totalPrice}
+                    </td>
+                    <td className={tableStyles.priceCell}>
                       {order.isPaid
                         ? `${order.paidAt.substring(0, 10)}`
                         : 'Not paid'}
                     </td>
-                    <td>
+                    <td className={tableStyles.priceCell}>
                       <Link href={`/order/${order._id}`}>
                         <a>Details</a>
                       </Link>
                     </td>
-                  </tr>;
-                })}
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
