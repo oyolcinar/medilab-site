@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   gap: 20vw;
+  align-items: center;
 }
 
 .logo {
@@ -26,7 +27,6 @@
 
 .list > a, .list > ins {
   margin: 0 25px 0 25px;
-  padding-bottom: 40px;
   line-break: normal;
   transition: color 0.2s ease-in-out;
   text-decoration: none;
@@ -43,9 +43,9 @@
 }
 
 .langbox {
-  position: fixed;
-  right: 20px;
-  top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70px;
 }
 
 .langbox button {
@@ -68,6 +68,11 @@
   transition: color 0.2s ease-in-out;
   height: 78px;
   
+}
+
+.list {
+  display: flex;
+  align-items: center;
 }
 
 .hamburger:hover{
