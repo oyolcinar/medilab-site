@@ -16,6 +16,7 @@
     "/placeorder": ["placeorder"],
     "/order/[id]": ["order"],
     "/order-history": ["order-history"],
+    "/success": ["success"],
     "/policies/privacy-and-cookie-policy": ["privacy-and-cookie-policy"],
     "/policies/terms-of-service": ["terms-of-service"],
     "/policies/terms-and-conditions-and-services-agreement": [
