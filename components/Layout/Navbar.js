@@ -11,6 +11,7 @@ import useTranslation from 'next-translate/useTranslation';
 import setLanguage from 'next-translate/setLanguage';
 import { useContext, useEffect } from 'react';
 import { Store } from '../../utils/Store';
+import MobileDropdown from '../UI/MobileDropdown';
 
 const Navbar = () => {
   const { state } = useContext(Store);
@@ -20,6 +21,7 @@ const Navbar = () => {
   const { t } = useTranslation('common');
 
   const [open, setOpen] = useState(false);
+  const [mobile, setMobile] = useState(false);
   const [cartItemsCount, setCartItemsCount] = useState(0);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const Navbar = () => {
   }, [state.cart.cartItems]);
 
   function toggleDropdown() {
-    setOpen((prevState) => !prevState);
+    setMobile((prevState) => !prevState);
   }
 
   function logoutHandler() {
@@ -49,7 +51,7 @@ const Navbar = () => {
           className={styles.hamburger}
           onClick={toggleDropdown}
         />
-        {open && <DropdownMenu />}
+        {mobile && <MobileDropdown setMobile={setMobile} mobile={mobile} />}
         <div className={styles.container}>
           <Link href='/'>
             <a className={styles.logo}>Medilab Estetik</a>
@@ -67,10 +69,11 @@ const Navbar = () => {
                     setOpen(false);
                   }}
                   onClick={linkClickHandler}
+                  className={styles.dropdownBtn}
                 >
                   {t('services')}
                   <IoMdArrowDropdown className={styles.dropdown} />
-                  {open && <DropdownMenu />}
+                  {open && <DropdownMenu open={open} />}
                 </ins>
               </Link>
               <Link href='/blog'>{t('blog')}</Link>
