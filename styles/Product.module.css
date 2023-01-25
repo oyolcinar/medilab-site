@@ -48,3 +48,9 @@
   padding: 20px 50px;
   font-size: 0.7rem;
 }
+
+@media screen and (max-width: 900px) {
+  .product {
+    max-width: 70%;
+  }
+}
