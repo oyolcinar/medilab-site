@@ -41,6 +41,10 @@
   gap: 10px;
 }
 
+.icon {
+  padding-top: 2px;
+}
+
 
 @media screen and (width > 1100px) {
   .container {

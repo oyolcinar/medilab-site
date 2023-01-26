@@ -4,7 +4,6 @@ import ButtonLarge from '../UI/ButtonLarge';
 import { useState } from 'react';
 import DropdownMenu from '../UI/DropdownMenu';
 import { IoMdArrowDropdown } from 'react-icons/io';
-import { GiHamburgerMenu } from 'react-icons/gi';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -13,6 +12,7 @@ import { useContext, useEffect } from 'react';
 import { Store } from '../../utils/Store';
 import MobileDropdown from '../UI/MobileDropdown';
 import { useTransition, animated } from '@react-spring/web';
+import { Cross as Hamburger } from 'hamburger-react';
 
 const Navbar = () => {
   const { state } = useContext(Store);
@@ -30,7 +30,7 @@ const Navbar = () => {
     enter: { transform: 'scaleY(1)', 'transform-origin': 'top center' },
     leave: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
     config: {
-      duration: 150,
+      duration: 200,
     },
   });
 
@@ -39,17 +39,33 @@ const Navbar = () => {
     enter: { transform: 'scaleY(1)', 'transform-origin': 'top center' },
     leave: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
     config: {
-      duration: 150,
+      duration: 200,
     },
   });
+
+  const [windowSize, setWindowSize] = useState(0);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  });
+
+  useEffect(() => {
+    if (windowSize > 1100) {
+      setMobile(false);
+    }
+  }, [windowSize]);
 
   useEffect(() => {
     setCartItemsCount(state.cart.cartItems.reduce((a, c) => a + c.quantity, 0));
   }, [state.cart.cartItems]);
-
-  function toggleDropdown() {
-    setMobile((prevState) => !prevState);
-  }
 
   function logoutHandler() {
     signOut();
@@ -59,17 +75,18 @@ const Navbar = () => {
     router.push('/auth');
   }
 
-  function linkClickHandler() {
-    setOpen(false);
-  }
-
   return (
     <>
       <nav className={styles.nav}>
-        <GiHamburgerMenu
-          className={styles.hamburger}
-          onClick={toggleDropdown}
-        />
+        <div className={styles.hamburger}>
+          <Hamburger
+            easing='ease-in-out'
+            rounded
+            toggled={mobile}
+            toggle={setMobile}
+            color='#12aac5'
+          />
+        </div>
         {transitionMobile((style, item) =>
           item ? (
             <animated.div style={style} className={styles.mobileContainer}>
@@ -95,7 +112,6 @@ const Navbar = () => {
                   onMouseLeave={() => {
                     setOpen(false);
                   }}
-                  onClick={linkClickHandler}
                   className={styles.dropdownBtn}
                 >
                   {t('services')}
@@ -106,7 +122,7 @@ const Navbar = () => {
                         style={style}
                         className={styles.dropContainer}
                       >
-                        <DropdownMenu />
+                        <DropdownMenu setOpen={setOpen} />
                       </animated.div>
                     ) : (
                       ''

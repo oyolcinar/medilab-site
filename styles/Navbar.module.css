@@ -62,6 +62,7 @@
 }
 
 .hamburger {
+  padding-top: 15px;
   display: none;
   font-size: 1.2rem;
   color: #12aac5;
@@ -115,6 +116,7 @@
 @media screen and (max-width: 1100px) {
   .nav {
     justify-content: flex-end;
+    align-items: center;
   }
   
   .container {

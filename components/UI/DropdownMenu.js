@@ -1,9 +1,14 @@
 import styles from '../../styles/Dropdown.module.css';
 import DropdownCluster from './DropdownCluster';
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ setOpen }) => {
   return (
-    <div className={styles.dropdown}>
+    <div
+      className={styles.dropdown}
+      onClick={() => {
+        setOpen(false);
+      }}
+    >
       <DropdownCluster
         name='Dentistry'
         link='/services/dentistry'
