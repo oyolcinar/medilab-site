@@ -12,6 +12,7 @@ import setLanguage from 'next-translate/setLanguage';
 import { useContext, useEffect } from 'react';
 import { Store } from '../../utils/Store';
 import MobileDropdown from '../UI/MobileDropdown';
+import { useTransition, animated } from '@react-spring/web';
 
 const Navbar = () => {
   const { state } = useContext(Store);
@@ -23,6 +24,24 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
   const [cartItemsCount, setCartItemsCount] = useState(0);
+
+  const transition = useTransition(open, {
+    from: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
+    enter: { transform: 'scaleY(1)', 'transform-origin': 'top center' },
+    leave: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
+    config: {
+      duration: 150,
+    },
+  });
+
+  const transitionMobile = useTransition(mobile, {
+    from: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
+    enter: { transform: 'scaleY(1)', 'transform-origin': 'top center' },
+    leave: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
+    config: {
+      duration: 150,
+    },
+  });
 
   useEffect(() => {
     setCartItemsCount(state.cart.cartItems.reduce((a, c) => a + c.quantity, 0));
@@ -51,7 +70,15 @@ const Navbar = () => {
           className={styles.hamburger}
           onClick={toggleDropdown}
         />
-        {mobile && <MobileDropdown setMobile={setMobile} mobile={mobile} />}
+        {transitionMobile((style, item) =>
+          item ? (
+            <animated.div style={style} className={styles.mobileContainer}>
+              <MobileDropdown setMobile={setMobile} />
+            </animated.div>
+          ) : (
+            ''
+          ),
+        )}
         <div className={styles.container}>
           <Link href='/'>
             <a className={styles.logo}>Medilab Estetik</a>
@@ -73,7 +100,18 @@ const Navbar = () => {
                 >
                   {t('services')}
                   <IoMdArrowDropdown className={styles.dropdown} />
-                  {open && <DropdownMenu open={open} />}
+                  {transition((style, item) =>
+                    item ? (
+                      <animated.div
+                        style={style}
+                        className={styles.dropContainer}
+                      >
+                        <DropdownMenu />
+                      </animated.div>
+                    ) : (
+                      ''
+                    ),
+                  )}
                 </ins>
               </Link>
               <Link href='/blog'>{t('blog')}</Link>

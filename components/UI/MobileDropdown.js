@@ -1,14 +1,19 @@
 import Link from 'next/link';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import styles from '../../styles/MobileDropdown.module.css';
 import setLanguage from 'next-translate/setLanguage';
+import { FiLogIn } from 'react-icons/fi';
+import { FiLogOut } from 'react-icons/fi';
 
 const MobileDropdown = ({ setMobile }) => {
   const { data: session, status } = useSession();
 
+  function logoutHandler() {
+    signOut();
+  }
+
   return (
     <div
-      className={styles.container}
       onClick={() => {
         setMobile(false);
       }}
@@ -30,6 +35,21 @@ const MobileDropdown = ({ setMobile }) => {
         ) : (
           <div className={styles.item}>
             <Link href='/cart'>YOUR CART</Link>
+          </div>
+        )}
+        {!session ? (
+          <div className={styles.item}>
+            <Link href='/auth'>
+              <div className={styles.log}>
+                LOGIN <FiLogIn className={styles.icon} />
+              </div>
+            </Link>
+          </div>
+        ) : (
+          <div className={styles.item}>
+            <div onClick={logoutHandler} className={styles.log}>
+              LOGOUT <FiLogOut className={styles.icon} />
+            </div>
           </div>
         )}
         <div className={styles.item}>

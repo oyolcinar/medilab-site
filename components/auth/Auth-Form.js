@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Auth-Form.module.css';
-/* import { redirect } from 'next/dist/server/api-utils'; */
 
 function AuthForm({
   login,
