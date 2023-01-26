@@ -23,6 +23,7 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
+  const [clicked, setClicked] = useState(false);
   const [cartItemsCount, setCartItemsCount] = useState(0);
 
   const transition = useTransition(open, {
@@ -44,6 +45,15 @@ const Navbar = () => {
   });
 
   const [windowSize, setWindowSize] = useState(0);
+
+  useEffect(() => {
+    if (clicked) {
+      const intervalId = setInterval(() => {
+        setClicked(false);
+      }, 1000);
+      return () => clearInterval(intervalId);
+    }
+  }, []);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -107,7 +117,7 @@ const Navbar = () => {
               <Link href='/services'>
                 <ins
                   onMouseEnter={() => {
-                    setOpen(true);
+                    !clicked ? setOpen(true) : '';
                   }}
                   onMouseLeave={() => {
                     setOpen(false);
@@ -122,7 +132,10 @@ const Navbar = () => {
                         style={style}
                         className={styles.dropContainer}
                       >
-                        <DropdownMenu setOpen={setOpen} />
+                        <DropdownMenu
+                          setOpen={setOpen}
+                          setClicked={setClicked}
+                        />
                       </animated.div>
                     ) : (
                       ''

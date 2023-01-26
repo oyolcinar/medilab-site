@@ -1,11 +1,12 @@
 import styles from '../../styles/Dropdown.module.css';
 import DropdownCluster from './DropdownCluster';
 
-const DropdownMenu = ({ setOpen }) => {
+const DropdownMenu = ({ setOpen, setClicked }) => {
   return (
     <div
       className={styles.dropdown}
       onClick={() => {
+        setClicked(true);
         setOpen(false);
       }}
     >
