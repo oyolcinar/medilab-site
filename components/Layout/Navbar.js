@@ -4,6 +4,7 @@ import ButtonLarge from '../UI/ButtonLarge';
 import { useState } from 'react';
 import DropdownMenu from '../UI/DropdownMenu';
 import { IoMdArrowDropdown } from 'react-icons/io';
+import { FaShoppingCart } from 'react-icons/fa';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -88,6 +89,14 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
+        <Link href='/cart'>
+          <div className={styles.cart}>
+            <FaShoppingCart />
+            {cartItemsCount > 0 && (
+              <span className={styles.itemCount}>{cartItemsCount}</span>
+            )}
+          </div>
+        </Link>
         <div className={styles.hamburger}>
           <Hamburger
             easing='ease-in-out'

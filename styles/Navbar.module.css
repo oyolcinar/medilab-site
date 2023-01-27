@@ -95,6 +95,25 @@
   
 }
 
+.cart {
+  display: none;
+  color: #12aac5;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.cart:hover {
+  color:#2fbed7;
+}
+
+.itemCount {
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  left: 39px;
+  top: 20px;
+}
+
 .list {
   display: flex;
   align-items: center;
@@ -139,7 +158,7 @@
 
 @media screen and (max-width: 1100px) {
   .nav {
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
   }
   
@@ -162,6 +181,11 @@
   .hamburger {
     margin-right: 20px;
     display: block;
+  }
+
+  .cart {
+    display: block;
+    margin-left: 20px;
   }
 }
 
