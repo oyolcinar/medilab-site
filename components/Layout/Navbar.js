@@ -89,14 +89,18 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.nav}>
-        <Link href='/cart'>
-          <div className={styles.cart}>
-            <FaShoppingCart />
-            {cartItemsCount > 0 && (
-              <span className={styles.itemCount}>{cartItemsCount}</span>
-            )}
-          </div>
-        </Link>
+        {session ? (
+          <Link href='/cart'>
+            <div className={styles.cart}>
+              <FaShoppingCart />
+              {cartItemsCount > 0 && (
+                <span className={styles.itemCount}>{cartItemsCount}</span>
+              )}
+            </div>
+          </Link>
+        ) : (
+          <div className={styles.cart}></div>
+        )}
         <div className={styles.hamburger}>
           <Hamburger
             easing='ease-in-out'

@@ -32,7 +32,7 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  gap: 22vw;
+  gap: 19vw;
   align-items: center;
 }
 
@@ -92,7 +92,6 @@
   color: #12aac5;
   transition: color 0.2s ease-in-out;
   height: 78px;
-  
 }
 
 .cart {
