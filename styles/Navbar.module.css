@@ -99,6 +99,7 @@
   color: #12aac5;
   font-size: 2rem;
   cursor: pointer;
+  position: relative;
 }
 
 .cart:hover {
@@ -109,8 +110,8 @@
   position: absolute;
   color: white;
   font-size: 0.8rem;
-  left: 39px;
-  top: 20px;
+  left: 19px;
+  top: 8px;
 }
 
 .list {
