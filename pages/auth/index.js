@@ -19,6 +19,7 @@ function AuthPage() {
       incorrect={`${t('incorrect')}`}
       existing={`${t('existing')}`}
       newAccount={`${t('newAccount')}`}
+      passwordError={`${t('passwordError')}`}
     />
   );
 }

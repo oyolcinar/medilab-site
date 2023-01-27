@@ -1,7 +1,9 @@
 import styles from '../../styles/Dropdown.module.css';
 import DropdownCluster from './DropdownCluster';
+import useTranslation from 'next-translate/useTranslation';
 
 const DropdownMenu = ({ setOpen, setClicked }) => {
+  const { t } = useTranslation('common');
   return (
     <div
       className={styles.dropdown}
@@ -11,7 +13,7 @@ const DropdownMenu = ({ setOpen, setClicked }) => {
       }}
     >
       <DropdownCluster
-        name='Dentistry'
+        name={t('dentistry')}
         link='/services/dentistry'
         sublinks={[
           { linkName: 'Zirconium', url: '/services/dentistry/zirconium' },
@@ -46,7 +48,7 @@ const DropdownMenu = ({ setOpen, setClicked }) => {
         ]}
       />
       <DropdownCluster
-        name='Hair Transplant'
+        name={t('hairTransplant')}
         link='/services/hair-transplant'
         sublinks={[
           {
@@ -68,7 +70,7 @@ const DropdownMenu = ({ setOpen, setClicked }) => {
         ]}
       />
       <DropdownCluster
-        name='Check Up Packages'
+        name={t('checkUp')}
         link='/services/check-up-packages'
         sublinks={[
           {

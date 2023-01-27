@@ -8,7 +8,7 @@
   "corporate" : "KURUMSAL",
   "contact" : "BİZE ULAŞIN",
   "hairTransplant" : "SAÇ EKİMİ",
-  "dentistry" : "DİŞ HEKİMLİĞİ",
+  "dentistry" : "DİŞ SAĞLIĞI",
   "checkUp" : "CHECK UP PAKETLERİ",
   "hospitals" : "HASTANELER VE KLİNİKLER",
   "testimonials" : "REFERANSLAR",  
@@ -16,8 +16,17 @@
   "service" : "Website Hizmet Şartları",
   "conditions" : "Şartlar, Koşullar Ve Hizmet Sözleşmesi",
   "cart": "SEPET",  
-  "accommodation": "Accommodation",
+  "accommodation": "Konaklama",
   "billing": "Billing Address",
   "payment": "Payment Method",
-  "order": "Place Order"
+  "order": "Place Order",
+  "language": "DİL",
+  "EN": "EN",
+  "TR": "TR",
+  "AR": "AR",
+  "RU": "RU",
+  "signin": "Giriş",
+  "signout": "Çıkış",
+  "SIGNIN": "GİRİŞ",
+  "SIGNOUT": "çIKIş"
 }

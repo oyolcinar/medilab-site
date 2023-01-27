@@ -19,7 +19,7 @@ const Navbar = () => {
   const router = useRouter();
   const { data: session, status } = useSession();
   const loading = status === 'loading';
-  const { t } = useTranslation('common');
+  const { t, lang } = useTranslation('common');
 
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
@@ -53,7 +53,7 @@ const Navbar = () => {
       }, 1000);
       return () => clearInterval(intervalId);
     }
-  }, []);
+  }, [clicked]);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -106,7 +106,17 @@ const Navbar = () => {
             ''
           ),
         )}
-        <div className={styles.container}>
+        <div
+          className={
+            lang === 'tr'
+              ? styles.turkce
+              : lang === 'ru'
+              ? styles.russian
+              : lang === 'ar-ae'
+              ? styles.arabic
+              : styles.container
+          }
+        >
           <Link href='/'>
             <a className={styles.logo}>Medilab Estetik</a>
           </Link>
@@ -153,21 +163,23 @@ const Navbar = () => {
                 </Link>
               )}
               {!session && !loading && (
-                <ButtonLarge name='Login' onClick={loginHandler} />
+                <ButtonLarge name={t('signin')} onClick={loginHandler} />
               )}
-              {session && <ButtonLarge onClick={logoutHandler} name='Logout' />}
+              {session && (
+                <ButtonLarge onClick={logoutHandler} name={t('signout')} />
+              )}
               <div className={styles.langbox}>
                 <button onClick={async () => await setLanguage('en')}>
-                  EN
+                  {t('EN')}
                 </button>
                 <button onClick={async () => await setLanguage('tr')}>
-                  TR
+                  {t('TR')}
                 </button>
                 <button onClick={async () => await setLanguage('ru')}>
-                  RU
+                  {t('RU')}
                 </button>
                 <button onClick={async () => await setLanguage('ar-ae')}>
-                  AR
+                  {t('AR')}
                 </button>
               </div>
             </ul>

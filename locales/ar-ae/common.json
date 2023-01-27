@@ -19,5 +19,14 @@
   "accommodation": "Accommodation",
   "billing": "Billing Address",
   "payment": "Payment Method",
-  "order": "Place Order"
+  "order": "Place Order",
+  "language": "لغة",
+  "EN": "EN",
+  "TR": "TR",
+  "AR": "AR",
+  "RU": "RU",
+  "signin": "تسجيل الدخول",
+  "signout": "خروج",
+  "SIGNIN": "تسجيل الدخول",
+  "SIGNOUT": "خروج"
 }

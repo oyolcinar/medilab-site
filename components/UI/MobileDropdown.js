@@ -4,9 +4,11 @@ import styles from '../../styles/MobileDropdown.module.css';
 import setLanguage from 'next-translate/setLanguage';
 import { FiLogIn } from 'react-icons/fi';
 import { FiLogOut } from 'react-icons/fi';
+import useTranslation from 'next-translate/useTranslation';
 
 const MobileDropdown = ({ setMobile }) => {
   const { data: session, status } = useSession();
+  const { t } = useTranslation('common');
 
   function logoutHandler() {
     signOut();
@@ -20,64 +22,64 @@ const MobileDropdown = ({ setMobile }) => {
     >
       <div className={styles.list}>
         <div className={styles.item}>
-          <Link href='/about'>ABOUT US</Link>
+          <Link href='/about'>{t('about')}</Link>
         </div>
         <div className={styles.item}>
-          <Link href='/services'>SERVICES</Link>
+          <Link href='/services'>{t('services')}</Link>
         </div>
         <div className={styles.item}>
-          <Link href='/blog'>BLOG</Link>
+          <Link href='/blog'>{t('blog')}</Link>
         </div>
         {!session ? (
           <div className={styles.item}>
-            <Link href='/pricing'>PRICING</Link>
+            <Link href='/pricing'>{t('pricing')}</Link>
           </div>
         ) : (
           <div className={styles.item}>
-            <Link href='/cart'>YOUR CART</Link>
+            <Link href='/cart'>{t('cart')}</Link>
           </div>
         )}
         {!session ? (
           <div className={styles.item}>
             <Link href='/auth'>
               <div className={styles.log}>
-                LOGIN <FiLogIn className={styles.icon} />
+                {t('SIGNIN')} <FiLogIn className={styles.icon} />
               </div>
             </Link>
           </div>
         ) : (
           <div className={styles.item}>
             <div onClick={logoutHandler} className={styles.log}>
-              LOGOUT <FiLogOut className={styles.icon} />
+              {t('SIGNOUT')} <FiLogOut className={styles.icon} />
             </div>
           </div>
         )}
         <div className={styles.item}>
-          LANGUAGE:{' '}
+          {t('language')}:{' '}
           <div className={styles.lang}>
             <div
               onClick={async () => await setLanguage('en')}
               className={styles.item}
             >
-              EN
+              {t('EN')}
             </div>
             <div
               onClick={async () => await setLanguage('tr')}
               className={styles.item}
             >
-              TR
+              {t('TR')}
             </div>
             <div
               onClick={async () => await setLanguage('ru')}
               className={styles.item}
             >
-              RU
+              {t('RU')}
             </div>
             <div
               onClick={async () => await setLanguage('ar-ae')}
               className={styles.item}
             >
-              AR
+              {t('AR')}
             </div>
           </div>
         </div>

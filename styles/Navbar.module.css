@@ -16,7 +16,31 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  gap: 20vw;
+  gap: 18vw;
+  align-items: center;
+}
+
+.turkce {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 14vw;
+  align-items: center;
+}
+
+.russian {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 22vw;
+  align-items: center;
+}
+
+.arabic {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 17vw;
   align-items: center;
 }
 
@@ -120,6 +144,18 @@
   }
   
   .container {
+    display: none;
+  }
+
+  .arabic {
+    display: none;
+  }
+
+  .turkce {
+    display: none;
+  }
+
+  .russian {
     display: none;
   }
 

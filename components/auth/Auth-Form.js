@@ -16,6 +16,7 @@ function AuthForm({
   incorrect,
   existing,
   newAccount,
+  passwordError,
 }) {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -133,9 +134,7 @@ function AuthForm({
               <label htmlFor='password'>
                 {password}
                 {!isPasswordValid && !isForgot && (
-                  <span className={styles.warning}>
-                    The password must be at least 8 characters.
-                  </span>
+                  <span className={styles.warning}>{passwordError}</span>
                 )}
                 {isLogin && loginResError === `${incorrect}` && (
                   <span className={styles.warning}>{loginResError}</span>
@@ -168,7 +167,7 @@ function AuthForm({
                 className={styles.toggle}
                 onClick={switchIsForgotHandler}
               >
-                Login with existing account
+                {existing}
               </button>
             )}
             <button
