@@ -36,7 +36,7 @@ const Cart = ({
   });
 
   useEffect(() => {
-    if (windowSize > 1100) {
+    if (windowSize > 1100 || windowSize === 0) {
       setMobile(false);
     }
     if (windowSize < 1100) {
