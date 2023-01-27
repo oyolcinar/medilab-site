@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { Store } from '../../utils/Store';
 import styles from '../../styles/Cart.module.css';
 import Link from 'next/link';
@@ -20,6 +20,29 @@ const Cart = ({
 }) => {
   const { state, dispatch } = useContext(Store);
   const router = useRouter();
+  const [mobile, setMobile] = useState(false);
+  const [windowSize, setWindowSize] = useState(0);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  });
+
+  useEffect(() => {
+    if (windowSize > 1100) {
+      setMobile(false);
+    }
+    if (windowSize < 1100) {
+      setMobile(true);
+    }
+  }, [windowSize]);
 
   function checkouthandler() {
     router.push('/accommodation');
@@ -77,6 +100,44 @@ const Cart = ({
     );
   });
 
+  const mobileCartArr = state.cart.cartItems.map((item) => {
+    total = item.price * item.quantity;
+    return (
+      <div key={item.code} className={styles.mobileContainer}>
+        <div>
+          <Link href={item.query}>
+            <a>
+              {/*             <Image alt={item.name} width={50} height={50}></Image> */}
+              &nbsp;
+            </a>
+          </Link>
+        </div>
+        <div className={styles.mobileInfo}>
+          <div>
+            <div className={styles.mobileName}>
+              <Link href={item.query}>{item.name}</Link>
+            </div>
+            <div className={styles.mobilePrice}>
+              {unitPrice}: {item.price} €
+            </div>
+            <div className={styles.mobilePrice}>
+              {totalPrice}: {total} €
+            </div>
+          </div>
+          <div className={styles.mobileQuantity}>
+            <div className={styles.mobileIcons}>
+              <AiOutlineMinus onClick={() => decrementItemHandler(item)} />
+            </div>
+            <div className={styles.mobileNo}>{item.quantity}</div>
+            <div className={styles.mobileIcons}>
+              <AiOutlinePlus onClick={() => incrementItemHandler(item)} />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  });
+
   return (
     <div>
       {state.cart.cartItems.length < 1 ? (
@@ -91,18 +152,21 @@ const Cart = ({
           <div className={styles.header}>
             <div>{header}</div>
           </div>
-          <table className={styles.table}>
-            <thead className={styles.tableHeader}>
-              <tr>
-                <th className={styles.infoCell}>{product}</th>
-                <th className={styles.tableCell}>{quantity}</th>
-                <th className={styles.priceCell}>{unitPrice}</th>
-                <th className={styles.totalCell}>{totalPrice}</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody className={styles.cartItem}>{cartItemsArr}</tbody>
-          </table>
+          {!mobile && (
+            <table className={styles.table}>
+              <thead className={styles.tableHeader}>
+                <tr>
+                  <th className={styles.infoCell}>{product}</th>
+                  <th className={styles.tableCell}>{quantity}</th>
+                  <th className={styles.priceCell}>{unitPrice}</th>
+                  <th className={styles.totalCell}>{totalPrice}</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody className={styles.cartItem}>{cartItemsArr}</tbody>
+            </table>
+          )}
+          {mobile && [mobileCartArr]}
           <div className={styles.subtotal}>
             {subtotal} (
             {state.cart.cartItems.reduce((a, c) => a + c.quantity, 0)}) :{' '}
