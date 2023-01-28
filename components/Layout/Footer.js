@@ -63,14 +63,18 @@ const Footer = () => {
           </Link>
           <Link href='/'>
             <a>
-              <HiPhone className={styles.inlineIcon} />
-              +90 549 170 12 00
+              <div className={styles.inline}>
+                <HiPhone className={styles.inlineIcon} />
+                <div>+90 549 170 12 00</div>
+              </div>
             </a>
           </Link>
           <Link href='mailto:info@medilabestetik.com'>
             <a>
-              <IoMdMail className={styles.inlineIcon} />
-              info@medilabestetik.com
+              <div className={styles.inline}>
+                <IoMdMail className={styles.inlineIcon} />
+                <div>info@medilabestetik.com</div>
+              </div>
             </a>
           </Link>
           <div className={styles.icons}>

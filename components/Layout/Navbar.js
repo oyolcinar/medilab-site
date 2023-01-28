@@ -28,9 +28,9 @@ const Navbar = () => {
   const [cartItemsCount, setCartItemsCount] = useState(0);
 
   const transition = useTransition(open, {
-    from: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
-    enter: { transform: 'scaleY(1)', 'transform-origin': 'top center' },
-    leave: { transform: 'scaleY(0)', 'transform-origin': 'top center' },
+    from: { transform: 'scaleY(0)', transformOrigin: 'top center' },
+    enter: { transform: 'scaleY(1)', transformOrigin: 'top center' },
+    leave: { transform: 'scaleY(0)', transformOrigin: 'top center' },
     config: {
       duration: 200,
     },
