@@ -68,6 +68,11 @@
 
 .lastLink {
   margin-left: 0.2rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.lastLink:hover {
+  color: #2fbed7;
 }
 
 .whatsapp {

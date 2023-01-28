@@ -107,7 +107,7 @@ const Footer = () => {
       </div>
       <div>
         <p>
-          Copyright © 2022, Medilab Estetik,
+          Copyright © 2023, Medilab Estetik,
           <Link href='https://www.medilabassist.com.tr/en-US/'>
             <a
               target='_blank'

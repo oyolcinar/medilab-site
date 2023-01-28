@@ -23,6 +23,8 @@ const Cart = ({
   const [mobile, setMobile] = useState(false);
   const [windowSize, setWindowSize] = useState(0);
 
+  console.log(mobile);
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize(window.innerWidth);
@@ -36,10 +38,10 @@ const Cart = ({
   });
 
   useEffect(() => {
-    if (windowSize > 1100 || windowSize === 0) {
+    if (windowSize > 1100) {
       setMobile(false);
     }
-    if (windowSize < 1100) {
+    if (windowSize < 1100 && windowSize !== 0) {
       setMobile(true);
     }
   }, [windowSize]);
